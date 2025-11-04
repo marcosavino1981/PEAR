@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="c24186564730f210c361f19f016d43bb" sys_domain="global" table="x_587457_pear_applicative_access" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>a40ed71e47f03210c361f19f016d433d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>label</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>2c0ed71e47f03210c361f19f016d433d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>app_id</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>a00ed71e47f03210c361f19f016d433e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user_type</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>280ed71e47f03210c361f19f016d433e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>business_part_id</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>ac0ed71e47f03210c361f19f016d433e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>technical_role_id</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>240ed71e47f03210c361f19f016d433f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>project_space_id</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>a80ed71e47f03210c361f19f016d433f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>organization_id</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>200ed71e47f03210c361f19f016d4340</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>enable</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 15:44:32</sys_created_on>
+            <sys_id>a40ed71e47f03210c361f19f016d4340</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_587457_pear_applicative_access" sys_domain="global" view="Default view">c24186564730f210c361f19f016d43bb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 15:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_587457_pear_applicative_access</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 08:59:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c24186564730f210c361f19f016d43bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_587457_pear_applicative_access</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+            <sys_update_name>sys_ui_section_c24186564730f210c361f19f016d43bb</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 08:59:24</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
