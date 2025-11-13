@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_587457_pear.PEAR_Utils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>PEAR_Utils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PEAR_Utils = Class.create();
+PEAR_Utils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	initialize: function () {},
+
+	getProjectsByBusinessProfile: function (BusinessProfileId) {
+
+		gs.info('getProjectsByBusinessProfile START')
+
+		var BusinessProfileRequiredProjects = [];
+		// 1) Business Parts attivi per BP
+		var BusinessPart = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		BusinessPart.addQuery('business_profile_id', BusinessProfileId);
+		// BusinessPart.addQuery('status', 'active');
+		BusinessPart.query();
+
+		while(BusinessPart.next())
+		{
+			// gs.info(BusinessPart.label);
+			var ApplicativeAccess = new GlideRecord('x_587457_pear_applicative_access');
+			ApplicativeAccess.addQuery("business_part_id",BusinessPart.sys_id);
+			ApplicativeAccess.query();
+			gs.info('getProjectsByBusinessProfile count ' + ApplicativeAccess.getRowCount())
+			gs.info('getProjectsByBusinessProfile query ' + ApplicativeAccess.getEncodedQuery())			
+			while(ApplicativeAccess.next())
+			{
+				// gs.info(ApplicativeAccess.app_id.getDisplayValue())
+				var ApplicativeAccessFormat = new GlideRecord('x_587457_pear_app_access_format');
+				ApplicativeAccessFormat.get('app_id',ApplicativeAccess.app_id);
+				// gs.info("\n\nBusinessPart " + BusinessPart.label + 'ApplicativeAccess ' + ApplicativeAccess.label + 'Format ' + ApplicativeAccessFormat.format)
+				// if(ApplicativeAccessFormat.format.toString().contains('prj'))
+				if(ApplicativeAccessFormat.format.toString().contains('project'))
+				{
+					if(!BusinessProfileRequiredProjects.toString().contains(ApplicativeAccess.project_space_id.toString()))
+						BusinessProfileRequiredProjects.push(ApplicativeAccess.project_space_id.toString())
+				}
+			}
+		}
+
+		gs.info('getProjectsByBusinessProfile BusinessProfileRequiredProjects ' + BusinessProfileRequiredProjects)
+		return BusinessProfileRequiredProjects
+
+    },
+
+	isProjectRequiredByBusinessProfile: function (BusinessProfileId) {
+		gs.info('Calling isProjectRequiredByBusinessProfile')
+
+		if (!BusinessProfileId) {
+			BusinessProfileId = this.getParameter('sysparm_BusinessProfileId');
+		}
+
+
+
+		var BusinessProfileRequiredProjects = [];
+		// 1) Business Parts attivi per BP
+		var BusinessPart = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		BusinessPart.addQuery('business_profile_id', BusinessProfileId);
+		BusinessPart.addQuery('status', 'active');
+		BusinessPart.query();
+		// gs.info('BusinessPart count ' + BusinessPart.getRowCount())
+		while(BusinessPart.next())
+		{
+			// gs.info(BusinessPart.label);
+			var ApplicativeAccess = new GlideRecord('x_587457_pear_applicative_access');
+			ApplicativeAccess.addQuery("business_part_id",BusinessPart.sys_id);
+			ApplicativeAccess.query();
+			while(ApplicativeAccess.next())
+			{
+				// gs.info(ApplicativeAccess.app_id.getDisplayValue())
+				var ApplicativeAccessFormat = new GlideRecord('x_587457_pear_app_access_format');
+				ApplicativeAccessFormat.get('app_id',ApplicativeAccess.app_id);
+				// gs.info("\n\nBusinessPart " + BusinessPart.label + 'ApplicativeAccess ' + ApplicativeAccess.label + 'Format ' + ApplicativeAccessFormat.format)
+				if(ApplicativeAccessFormat.format.toString().contains('prj'))
+				{
+					if(!BusinessProfileRequiredProjects.toString().contains(ApplicativeAccess.project_space_id.toString()))
+						BusinessProfileRequiredProjects.push(ApplicativeAccess.project_space_id.toString())
+				}
+			}
+		}
+
+		if(BusinessProfileRequiredProjects.length==0)
+			return false;
+		else
+			return true;
+
+    },
+
+    type: 'PEAR_Utils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-29 00:19:42</sys_created_on>
+        <sys_id>8c2d5ef647b83210c361f19f016d4365</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>PEAR_Utils</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_include_8c2d5ef647b83210c361f19f016d4365</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 21:53:58</sys_updated_on>
+    </sys_script_include>
+</record_update>

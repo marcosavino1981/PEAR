@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="project_maturity" table="x_587457_pear_prj_space" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>project_maturity</element>
+            <name>x_587457_pear_prj_space</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-27 17:09:52</sys_created_on>
+            <sys_id>2681379647b43210c361f19f016d43eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>project_maturity</sys_name>
+            <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+            <sys_update_name>sys_choice_x_587457_pear_prj_space_project_maturity</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-27 17:09:52</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

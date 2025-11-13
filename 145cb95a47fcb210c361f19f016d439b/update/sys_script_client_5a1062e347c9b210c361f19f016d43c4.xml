@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>app_id</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>PEAR_BusinessPartViewBasedOnAppFormat</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading && newValue === '') {
+      return;
+   }
+
+	var AllLabels = ['technical_role','business_unit','organization','technical_role','project','group','company'];
+	for (var j = 0; j < AllLabels.length; j++) {
+		var field = AllLabels[j];
+		g_form.setReadOnly(field, true);
+		// g_form.clearValue(field)
+	}
+
+	var ga = new GlideAjax('PEAR_Utils2');
+	ga.addParam('sysparm_name', 'getApplicativeAccessFormatbyApp');
+    ga.addParam('sysparm_Application', newValue);
+    ga.getXMLAnswer(function(answer) {
+		var i;
+		var format = answer.split("|")[0];
+		var separator = answer.split("|")[1];
+		// g_form.addInfoMessage('answer ' + answer);
+		// g_form.addInfoMessage('format ' + format);
+		// g_form.addInfoMessage('separator ' + separator);
+		var LabelPartArray = format.split(separator);
+		var AllLabels = ['technical_role','business_unit','organization','technical_role','project','group','company'];
+		var CurrentLabels = [];
+
+		// g_form.setVisible('company',false);
+		for(i=0;i<LabelPartArray.length;i++)
+		{
+			CurrentLabels.push(LabelPartArray[i]);
+		}
+
+		// Imposto i campi visibili / obbligatori / readonly
+		for (var j = 0; j < AllLabels.length; j++) {
+			var field = AllLabels[j];
+			// g_form.setReadOnly(field, true);
+
+			if (CurrentLabels.indexOf(field) !== -1) {
+				// Il campo è tra quelli validi → EDITABILE + OBBLIGATORIO
+				g_form.setReadOnly(field, false);
+				// g_form.setMandatory(field, true);
+				// g_form.setVisible(field, true);
+			}
+			else {
+				// Il campo NON è nel formato → READONLY + NON OBBLIGATORIO
+				// g_form.setReadOnly(field, true);
+				g_form.setMandatory(field, false);
+				g_form.clearValue(field)
+				// g_form.setVisible(field, false);   // Se vuoi puoi anche metterlo a false
+			}
+		}
+
+
+
+    }); 
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 18:42:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a1062e347c9b210c361f19f016d43c4</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>PEAR_BusinessPartViewBasedOnAppFormat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_client_5a1062e347c9b210c361f19f016d43c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-13 21:21:57</sys_updated_on>
+        <table>x_587457_pear_business_part_of_app_access</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

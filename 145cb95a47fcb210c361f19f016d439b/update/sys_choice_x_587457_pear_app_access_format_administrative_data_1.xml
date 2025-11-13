@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="administrative_data_1" table="x_587457_pear_app_access_format" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>administrative_data_1</element>
+            <name>x_587457_pear_app_access_format</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:53:05</sys_created_on>
+            <sys_id>64270e6747c1b210c361f19f016d4311</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>administrative_data_1</sys_name>
+            <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+            <sys_update_name>sys_choice_x_587457_pear_app_access_format_administrative_data_1</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:53:05</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>administrative_data_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Business unit</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:53:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>202742eb47c5b210c361f19f016d4306</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:53:31</sys_updated_on>
+            <value>business_unit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>administrative_data_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Company</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:53:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9c3742eb47c5b210c361f19f016d4306</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:53:40</sys_updated_on>
+            <value>company</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>administrative_data_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Group</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:53:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6a474aeb47c5b210c361f19f016d43da</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:54:08</sys_updated_on>
+            <value>group</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>administrative_data_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Organization</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:54:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7d57caeb47c5b210c361f19f016d4368</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:54:30</sys_updated_on>
+            <value>organization</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>administrative_data_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Project</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:53:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9c47c2a747c1b210c361f19f016d439d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:53:53</sys_updated_on>
+            <value>project</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>administrative_data_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Technical_role</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:53:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>020742eb47c5b210c361f19f016d4302</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:53:26</sys_updated_on>
+            <value>technical_role</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

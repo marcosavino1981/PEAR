@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="separator" table="x_587457_pear_app_access_format" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>separator</element>
+            <name>x_587457_pear_app_access_format</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:59:34</sys_created_on>
+            <sys_id>bb98c2af47c5b210c361f19f016d430e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>separator</sys_name>
+            <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+            <sys_update_name>sys_choice_x_587457_pear_app_access_format_separator</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:59:34</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>separator</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>,</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:59:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3398caaf47c5b210c361f19f016d43d0</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 17:56:46</sys_updated_on>
+            <value>,</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>separator</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>.</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:59:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b698caaf47c5b210c361f19f016d43cd</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 17:56:49</sys_updated_on>
+            <value>.</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>separator</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>;</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 17:01:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5da882af47c5b210c361f19f016d43be</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 17:56:40</sys_updated_on>
+            <value>;</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

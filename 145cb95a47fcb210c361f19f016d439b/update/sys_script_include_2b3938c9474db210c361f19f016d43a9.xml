@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_587457_pear.PEAR_PreviewAPI</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>PEAR_PreviewAPI</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PEAR_PreviewAPI = Class.create();
+PEAR_PreviewAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+  // ]]>🔹<![CDATA[ Metodo base per la UI Page
+  getApplicativeAccess: function() {
+	//gs.info('Calling getApplicativeAccess');
+    var out = [];
+    var gr = new GlideRecord('x_587457_pear_applicative_access');
+    gr.addQuery('enable', true);
+    gr.query();
+    while (gr.next()) {
+      out.push({
+        number: gr.getDisplayValue('number'),
+        label: gr.getDisplayValue('label'),
+        application: gr.getDisplayValue('app_id'),
+        business_part: gr.getDisplayValue('business_part_id'),
+        project: gr.getDisplayValue('project_space_id'),
+        technical_role: gr.getDisplayValue('technical_role_id')
+      });
+    }
+    return new global.JSON().encode(out);
+  },
+
+	getApplicativeAccessByBp: function(rowsJson) {
+
+
+
+	if (!rowsJson) {
+    	var rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
+	}
+
+	gs.info('getApplicativeAccessByBp rowsJson ' + rowsJson);
+
+	//gs.info('Calling getApplicativeAccessByBp rowsJson ' + rowsJson);
+
+    // raccogli i BP selezionati (e i Project se vuoi filtrarli)
+    var rows = [];
+    try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
+
+    var bpSet = {}; // set di BP
+    var prjSet = {}; // set di Project (opzionale)
+    rows.forEach(function(r){
+      if (r.business_profile_mrvs) bpSet[r.business_profile_mrvs] = 1;
+      if (r.projects_mrvs) prjSet[r.projects_mrvs] = 1;
+    });
+
+    var bpIds = Object.keys(bpSet);
+    var prjIds = Object.keys(prjSet);
+
+	gs.info('getApplicativeAccessByBp bpIds.length ' + bpIds.length)
+	gs.info('getApplicativeAccessByBp prjIds ' + prjIds.toString())
+
+    if (!bpIds.length)
+      return '[]';
+
+    // 1) Business Part attivi per i BP
+    var parts = new GlideRecord('x_587457_pear_business_part_of_app_access'); // BP↔App
+    parts.addQuery('business_profile_id', 'IN', bpIds.join(','));
+    // parts.addQuery('status', 'active');
+    parts.query();
+	gs.info('getApplicativeAccessByBp parts query ' + parts.getEncodedQuery());
+	gs.info('getApplicativeAccessByBp parts count ' + parts.getRowCount());
+
+    // (opzionale) mappa formato accesso per app: role / role_org / role_prj / role_org_prj
+    var formatByApp = {};
+    var fmt = new GlideRecord('x_587457_pear_app_access_format');
+    fmt.query();
+    while (fmt.next()) formatByApp[fmt.getValue('app_id')] = fmt.getValue('format'); // 'role', 'role_prj', ...
+
+    var out = [];
+    while (parts.next()) {
+		gs.info('getApplicativeAccessByBp parts label ' + parts.label + ' license ' + parts.license_id.getDisplayValue())
+
+		var parts_licenses_array = parts.license_id.split(',');
+		var parts_licenses_out = [];
+		var l = new GlideRecord('x_587457_pear_license');
+		for (i=0; i<parts_licenses_array.length; i++)
+		{
+			if(l.get('sys_id',parts_licenses_array[i]))
+				parts_licenses_out.push(l.number.toString())
+		}
+		var license_id = parts_licenses_out;
+
+
+      // 2) Applicative Access abilitati per quel Business Part
+      var aa = new GlideRecord('x_587457_pear_applicative_access'); // contiene project_space_id, technical_role_id, ecc.
+      aa.addQuery('business_part_id', parts.getUniqueValue());
+      aa.addQuery('enable', true);
+      aa.query();
+		gs.info('getApplicativeAccessByBp aa query ' + aa.getEncodedQuery());
+		gs.info('getApplicativeAccessByBp aa count ' + aa.getRowCount());	  
+      while (aa.next()) {
+		// var app_id = parts.app_id.number.toString();
+		var app_id = "app_id";
+		var project_space_id = aa.project_space_id.number.toString();
+		var technical_role_id = "aa.technical_role_id.number.toString()";
+
+		var ap = new GlideRecord('x_587457_pear_access_profile');
+		ap.get('business_part_id',parts.getUniqueValue());
+
+		var access_profile_id = ap.number.toString();
+		var access_profile = ap.label.toString();
+
+
+
+		// gs.info('MS app_id.number ' + app_id)
+
+        // (OPZIONALE) se vuoi applicare anche il filtro Project:
+        // prendi il formato della app, e se richiede project, filtra per i project selezionati
+        // var fmtVal = formatByApp[aa.getValue('app_id')] || 'role';
+        // if (fmtVal.indexOf('prj') > -1 && prjIds.length) {
+        //   var aaPrj = aa.getValue('project_space_id');
+        //   if (!aaPrj || prjIds.indexOf(aaPrj) === -1)
+        //     continue;
+        // }
+
+        out.push({
+          number: aa.getDisplayValue('number'),
+          label: aa.getDisplayValue('label'),
+          business_profile_id: parts.getDisplayValue('business_profile_id.number'),
+          business_profile: parts.getDisplayValue('business_profile_id'),
+		  app_id: app_id,
+          application: aa.getDisplayValue('app_id'),
+          business_part_id: parts.getDisplayValue('number'),
+          business_part: aa.getDisplayValue('business_part_id'),
+          project_space_id: project_space_id,
+          project: aa.getDisplayValue('project_space_id'),
+		  technical_role_id: technical_role_id,
+          technical_role: aa.getDisplayValue('technical_role_id'),
+		  access_profile_id : access_profile_id,
+		  access_profile : access_profile,
+		  license_id : license_id,
+		  license : parts.getDisplayValue('license_id')
+        });
+      }
+    }
+	gs.info('getApplicativeAccessByBp PEAR_PreviewAPI json ' + new global.JSON().encode(out))
+    return new global.JSON().encode(out);
+  },
+
+    type: 'PEAR_PreviewAPI'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 16:50:02</sys_created_on>
+        <sys_id>2b3938c9474db210c361f19f016d43a9</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>PEAR_PreviewAPI</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_include_2b3938c9474db210c361f19f016d43a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 22:43:11</sys_updated_on>
+    </sys_script_include>
+</record_update>

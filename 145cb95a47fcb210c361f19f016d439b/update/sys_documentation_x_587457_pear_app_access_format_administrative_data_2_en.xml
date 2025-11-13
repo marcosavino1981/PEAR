@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="administrative_data_2" label="Administrative data 2" language="en" table="x_587457_pear_app_access_format">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>administrative_data_2</element>
+            <help/>
+            <hint/>
+            <label>Administrative data 2</label>
+            <language>en</language>
+            <name>x_587457_pear_app_access_format</name>
+            <plural>Administrative data 2s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-12 16:56:09</sys_created_on>
+            <sys_id>25d7ca2f47c5b210c361f19f016d43c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Administrative data 2</sys_name>
+            <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+            <sys_update_name>sys_documentation_x_587457_pear_app_access_format_administrative_data_2_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-12 16:56:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
