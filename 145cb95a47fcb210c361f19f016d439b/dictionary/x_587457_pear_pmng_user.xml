@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b35cd6564734f210c361f19f016d430f" label="PMNG user" max_length="40" name="x_587457_pear_pmng_user" type="collection">
+        <element label="External company" max_length="32" name="external_company" reference="core_company" type="reference"/>
+        <element label="Manager UID" max_length="32" name="manager_uid" reference="sys_user" type="reference"/>
+        <element choice="3" label="Employee subtype" max_length="40" name="employee_subtype" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="subtype2" sequence="1" value="subtype2"/>
+                <element inactive_on_update="false" label="subtype1" sequence="0" value="subtype1"/>
+            </choice>
+        </element>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element label="AdminSiteCode" max_length="40" name="adminsitecode" type="string"/>
+        <element label="Job title" max_length="40" name="job_title" type="string"/>
+        <element label="Surname" max_length="40" name="surname" type="string"/>
+        <element label="Other Patents" max_length="40" name="other_patents" type="string"/>
+        <element choice="3" label="Employee type" max_length="40" name="employee_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="type2" sequence="1" value="type2"/>
+                <element inactive_on_update="false" label="type1" sequence="0" value="type1"/>
+            </choice>
+        </element>
+        <element label="COFOR" max_length="40" name="cofor" type="string"/>
+        <element label="enable" max_length="40" name="enable" type="boolean"/>
+        <element label="Phone number" max_length="40" name="phone_number" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Mail" max_length="40" name="mail" type="string"/>
+        <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element label="COSITE" max_length="40" name="cosite" type="string"/>
+        <element display="true" label="UID" max_length="32" name="uid" reference="sys_user" type="reference"/>
+        <element label="LW code" max_length="40" name="lw_code" type="string"/>
+        <element label="History company" max_length="32" name="history_company" reference="core_company" type="reference"/>
+        <element label="Stellantis directory" max_length="40" name="stellantis_directory" type="string"/>
+        <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <index name="index">
+            <element name="company"/>
+        </index>
+        <index name="index2">
+            <element name="department"/>
+        </index>
+        <index name="index3">
+            <element name="external_company"/>
+        </index>
+        <index name="index4">
+            <element name="history_company"/>
+        </index>
+        <index name="index5">
+            <element name="manager_uid"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d8c36a564774f210c361f19f016d4301" label="Assigned Business profile" max_length="40" name="x_587457_pear_assigned_business_profile" type="collection">
+        <element label="Assignment date" max_length="40" name="assignment_date" type="glide_date_time"/>
+        <element label="Business profile ID" max_length="32" name="business_profile_id" reference="x_587457_pear_business_profile" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Assigned Business profile ID" max_length="40" name="number" type="string"/>
+        <element label="UID" max_length="32" name="uid" reference="x_587457_pear_pmng_user" type="reference"/>
+        <index name="index">
+            <element name="business_profile_id"/>
+        </index>
+        <index name="index2">
+            <element name="uid"/>
+        </index>
+    </element>
+</database>

@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-12 18:28:25</sys_created_on>
-        <sys_id>f8ec12eb4789b210c361f19f016d4386</sys_id>
         <sys_name>Group</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>

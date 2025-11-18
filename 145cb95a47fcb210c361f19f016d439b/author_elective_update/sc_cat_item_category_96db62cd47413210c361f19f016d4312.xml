@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="PEAR - Access Request 2">9dab904d4749b210c361f19f016d4321</sc_cat_item>
+        <sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-05 01:08:40</sys_created_on>
+        <sys_id>96db62cd47413210c361f19f016d4312</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Can We Help You?.PEAR - Access Request 2</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sc_cat_item_category_96db62cd47413210c361f19f016d4312</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-05 01:08:40</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sc_cat_item_category_96db62cd47413210c361f19f016d4312</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="PEAR - Access Request 2">9dab904d4749b210c361f19f016d4321</sc_cat_item><sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-11-05 01:08:40</sys_created_on><sys_id>96db62cd47413210c361f19f016d4312</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Can We Help You?.PEAR - Access Request 2</sys_name><sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package><sys_policy/><sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope><sys_update_name>sc_cat_item_category_96db62cd47413210c361f19f016d4312</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-11-05 01:08:40</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>560704258</payload_hash>
+        <record_name>Can We Help You?.PEAR - Access Request 2</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-05 01:08:40</sys_created_on>
+        <sys_id>5adb62cd47413210c361f19f016d4316</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a518f0c610000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-05 01:08:40</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>9edb62cd7a4132102625e919081b0b15</update_guid>
+        <update_guid_history>9edb62cd7a4132102625e919081b0b15:560704258</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Can We Help You?.PEAR - Access Request 2">cbb83d6847953210c361f19f016d4358</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-15 18:24:05</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>0beb92626afc451082c7bd0508764504</sys_id>
+        <sys_metadata>96db62cd47413210c361f19f016d4312</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Can We Help You?.PEAR - Access Request 2</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_96db62cd47413210c361f19f016d4312</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_96db62cd47413210c361f19f016d4312">5adb62cd47413210c361f19f016d4316</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-15 18:24:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

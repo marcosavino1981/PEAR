@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7c03ce9a4730f210c361f19f016d4314" label="Technical role" max_length="40" name="x_587457_pear_technical_role" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Technical role ID" max_length="40" name="number" type="string"/>
+        <element label="App ID" max_length="32" name="app_id" reference="x_587457_pear_application" type="reference"/>
+        <element label="Decription" max_length="100" name="decription" type="string"/>
+        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <element label="App access ID" max_length="32" name="app_access_id" reference="x_587457_pear_applicative_access" type="reference"/>
+        <index name="index">
+            <element name="app_access_id"/>
+        </index>
+        <index name="index2">
+            <element name="app_id"/>
+        </index>
+    </element>
+</database>

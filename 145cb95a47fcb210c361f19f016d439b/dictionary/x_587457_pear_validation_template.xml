@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0c96525a47f0f210c361f19f016d4367" label="Validation template" max_length="40" name="x_587457_pear_validation_template" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Validation template ID" max_length="40" name="number" type="string"/>
+        <element label="Description" max_length="100" name="description" type="string"/>
+        <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <element choice="3" label="Training certificate condition" max_length="40" name="training_certificate_condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="not_applicable" sequence="2" value="not_applicable"/>
+                <element inactive_on_update="false" label="required" sequence="0" value="required"/>
+                <element inactive_on_update="false" label="optional" sequence="1" value="optional"/>
+            </choice>
+        </element>
+        <element label="Message" max_length="40" name="message" type="string"/>
+        <element choice="1" label="Auto answer" max_length="40" name="auto_answer" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Auto rejection" sequence="1" value="auto_rejection"/>
+                <element inactive_on_update="false" label="Auto validation" sequence="0" value="auto_validation"/>
+            </choice>
+        </element>
+        <element label="Technical role" max_length="40" name="technical_role" reference="x_587457_pear_technical_role" type="reference"/>
+        <element label="Business profile" max_length="40" name="business_profile" reference="x_587457_pear_business_profile" type="reference"/>
+        <element choice="3" label="Decision type" max_length="40" name="decision_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="human" sequence="1" value="human"/>
+                <element inactive_on_update="false" label="automatic" sequence="0" value="automatic"/>
+            </choice>
+        </element>
+        <element label="Organization" max_length="32" name="organization" reference="x_587457_pear_organization" type="reference"/>
+        <element label="User type" max_length="40" name="user_type" reference="x_587457_pear_user_type" type="reference"/>
+        <element label="Project maturity" max_length="40" name="project_maturity" type="string"/>
+        <element label="Label" max_length="40" name="label" type="string"/>
+        <element label="Request confirmation" max_length="40" name="request_confirmation" type="boolean"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+        <index name="index2">
+            <element name="organization"/>
+        </index>
+    </element>
+</database>

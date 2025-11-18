@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d974e2d64774f210c361f19f016d436c" label="Assigned License" max_length="40" name="x_587457_pear_assigned_license" type="collection">
+        <element label="License ID" max_length="32" name="license_id" reference="x_587457_pear_license" type="reference"/>
+        <element label="UID" max_length="32" name="uid" reference="x_587457_pear_pmng_user" type="reference"/>
+        <index name="index">
+            <element name="license_id"/>
+        </index>
+        <index name="index2">
+            <element name="uid"/>
+        </index>
+    </element>
+</database>

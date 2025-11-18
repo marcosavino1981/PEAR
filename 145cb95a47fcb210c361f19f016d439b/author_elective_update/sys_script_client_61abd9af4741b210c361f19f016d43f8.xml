@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>PEAR_onLoadCombRule</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    try {
+        var fieldName = 'source_type';
+        var allowedTables = [
+            'x_587457_pear_business_profile',
+            'x_587457_pear_access_profile',
+            'x_587457_pear_applicative_access'
+        ];
+
+        // Recupera l'elenco completo delle opzioni
+        var options = g_form.getOptions(fieldName);
+        if (!options) return;
+
+        // Pulisce il campo e rimette solo le opzioni consentite
+        g_form.clearOptions(fieldName);
+        for (var i = 0; i < allowedTables.length; i++) {
+            g_form.addOption(fieldName, allowedTables[i], allowedTables[i]);
+        }
+    } catch (e) {
+        g_form.addInfoMessage('Error filtering Source Type options: ' + e);
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 13:44:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>61abd9af4741b210c361f19f016d43f8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PEAR_onLoadCombRule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_client_61abd9af4741b210c361f19f016d43f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 13:53:32</sys_updated_on>
+        <table>x_587457_pear_combination_rule</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_script_client_61abd9af4741b210c361f19f016d43f8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;PEAR_onLoadCombRule&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    try {
+        var fieldName = 'source_type';
+        var allowedTables = [
+            'x_587457_pear_business_profile',
+            'x_587457_pear_access_profile',
+            'x_587457_pear_applicative_access'
+        ];
+
+        // Recupera l'elenco completo delle opzioni
+        var options = g_form.getOptions(fieldName);
+        if (!options) return;
+
+        // Pulisce il campo e rimette solo le opzioni consentite
+        g_form.clearOptions(fieldName);
+        for (var i = 0; i &lt; allowedTables.length; i++) {
+            g_form.addOption(fieldName, allowedTables[i], allowedTables[i]);
+        }
+    } catch (e) {
+        g_form.addInfoMessage('Error filtering Source Type options: ' + e);
+    }
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-11-12 13:44:21&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;61abd9af4741b210c361f19f016d43f8&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;PEAR_onLoadCombRule&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="PEAR" source="x_587457_pear"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PEAR"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_61abd9af4741b210c361f19f016d43f8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-11-12 13:53:32&lt;/sys_updated_on&gt;&lt;table&gt;x_587457_pear_combination_rule&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1006580523</payload_hash>
+        <record_name>PEAR_onLoadCombRule</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 13:53:32</sys_created_on>
+        <sys_id>ee0ed1274781b210c361f19f016d43cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a7857d2d70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 13:53:32</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>620ed1275b81b21074665c03fe6262cc</update_guid>
+        <update_guid_history>620ed1275b81b21074665c03fe6262cc:1006580523,90fb1daff041b210dccaea6d243c0cf2:583460574</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 13:57:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>a505d3f04d3c43fe80c28251e70a2404</sys_id>
+        <sys_metadata>61abd9af4741b210c361f19f016d43f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PEAR_onLoadCombRule</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent display_value="Combination rule">7e02812b478d7210c361f19f016d4336</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_script_client_61abd9af4741b210c361f19f016d43f8</sys_update_name>
+        <sys_update_version display_value="sys_script_client_61abd9af4741b210c361f19f016d43f8">ee0ed1274781b210c361f19f016d43cc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 13:57:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

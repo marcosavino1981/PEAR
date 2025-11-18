@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6296621e4774f210c361f19f016d43eb" label="Assigned Project/Collab space " max_length="40" name="x_587457_pear_assigned_project_collab_space" type="collection">
+        <element label="Assigned App access ID" max_length="32" name="assigned_app_access_id" reference="x_587457_pear_assigned_app_access" type="reference"/>
+        <element label="uid" max_length="32" name="uid" reference="x_587457_pear_pmng_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Assigned Project ID" max_length="40" name="number" type="string"/>
+        <element label="Assignment date" max_length="40" name="assignment_date" type="glide_date_time"/>
+        <element label="Assigned Business profile ID" max_length="32" name="assigned_business_profile_id" reference="x_587457_pear_assigned_business_profile" type="reference"/>
+        <element label="Project ID" max_length="32" name="project_id" reference="x_587457_pear_prj_space" type="reference"/>
+        <index name="index">
+            <element name="assigned_business_profile_id"/>
+        </index>
+        <index name="index2">
+            <element name="project_id"/>
+        </index>
+        <index name="index3">
+            <element name="uid"/>
+        </index>
+    </element>
+</database>

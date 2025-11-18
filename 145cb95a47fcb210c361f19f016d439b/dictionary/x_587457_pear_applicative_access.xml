@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasLabels=true" db_object_id="014186564730f210c361f19f016d4301" label="Applicative access" max_length="40" name="x_587457_pear_applicative_access" type="collection">
+        <element label="Organization ID" max_length="32" name="organization_id" reference="x_587457_pear_organization" type="reference"/>
+        <element label="Organization" max_length="32" name="organization" reference="x_587457_pear_organization" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="App access ID" max_length="40" name="number" type="string"/>
+        <element label="App ID" max_length="32" name="app_id" reference="x_587457_pear_application" type="reference"/>
+        <element label="Business unit" max_length="32" name="business_unit" reference="x_587457_pear_organization" type="reference"/>
+        <element label="Business part ID" max_length="32" name="business_part_id" reference="x_587457_pear_business_part_of_app_access" type="reference"/>
+        <element label="Company" max_length="32" name="company" reference="x_587457_pear_organization" type="reference"/>
+        <element label="Project" max_length="32" name="project" reference="x_587457_pear_prj_space" type="reference"/>
+        <element label="Enable" max_length="40" name="enable" type="boolean"/>
+        <element label="Group" max_length="32" name="group" reference="x_587457_pear_organization" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;var separator = current.app_id.applicative_access_format.separator;&#13;&#10;&#9;var label = [];&#13;&#10;&#9;if(!gs.nil(current.technical_role))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('technical_role'))&#13;&#10;&#9;if(!gs.nil(current.business_unit))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('business_unit'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.organization))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('organization'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.project))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('project'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.group))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('group'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.company))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('company'))&#9;&#9;&#13;&#10;&#9;return label.toString().replaceAll(',',separator);  // return the calculated value&#13;&#10;&#13;&#10;})(current);" display="true" label="Label" max_length="40" name="label" type="string" virtual="true"/>
+        <element label="User type" max_length="32" name="user_type" reference="x_587457_pear_user_type" type="reference"/>
+        <element label="Technical role" max_length="32" name="technical_role" reference="x_587457_pear_technical_role" type="reference"/>
+        <element label="Project space ID" max_length="32" name="project_space_id" reference="x_587457_pear_prj_space" type="reference"/>
+        <index name="index">
+            <element name="app_id"/>
+        </index>
+        <index name="index2">
+            <element name="business_part_id"/>
+        </index>
+        <index name="index3">
+            <element name="business_unit"/>
+        </index>
+        <index name="index4">
+            <element name="company"/>
+        </index>
+        <index name="index5">
+            <element name="group"/>
+        </index>
+        <index name="index6">
+            <element name="organization"/>
+        </index>
+        <index name="index7">
+            <element name="organization_id"/>
+        </index>
+        <index name="index8">
+            <element name="project"/>
+        </index>
+        <index name="index9">
+            <element name="project_space_id"/>
+        </index>
+        <index name="index10">
+            <element name="technical_role"/>
+        </index>
+        <index name="index11">
+            <element name="user_type"/>
+        </index>
+    </element>
+</database>

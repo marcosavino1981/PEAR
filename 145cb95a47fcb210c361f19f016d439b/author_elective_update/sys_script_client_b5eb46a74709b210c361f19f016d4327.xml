@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>PEAR_SetAppAccessFormat</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+   //Type appropriate comment here, and begin script below
+	var format;
+	var data1 = g_form.getValue('administrative_data_1');
+	var data2 = g_form.getValue('administrative_data_2');
+	var data3 = g_form.getValue('administrative_data_3');
+	var separator = g_form.getValue('separator');
+	if(data2 === '' || data2 === null || data2 === undefined)
+		format = data1;
+	else if(data3 === '' || data3 === null || data3 === undefined)
+		format = data1 + separator + data2;
+	else
+		format = data1 + separator + data2 + separator + data3;
+
+   g_form.setValue('format',format);
+
+ 
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 17:15:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b5eb46a74709b210c361f19f016d4327</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>PEAR_SetAppAccessFormat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_client_b5eb46a74709b210c361f19f016d4327</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 18:00:03</sys_updated_on>
+        <table>x_587457_pear_app_access_format</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_script_client_b5eb46a74709b210c361f19f016d4327</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;PEAR_SetAppAccessFormat&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+   //Type appropriate comment here, and begin script below
+	var format;
+	var data1 = g_form.getValue('administrative_data_1');
+	var data2 = g_form.getValue('administrative_data_2');
+	var data3 = g_form.getValue('administrative_data_3');
+	var separator = g_form.getValue('separator');
+	if(data2 === '' || data2 === null || data2 === undefined)
+		format = data1;
+	else if(data3 === '' || data3 === null || data3 === undefined)
+		format = data1 + separator + data2;
+	else
+		format = data1 + separator + data2 + separator + data3;
+
+   g_form.setValue('format',format);
+
+ 
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-11-12 17:15:22&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b5eb46a74709b210c361f19f016d4327&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;PEAR_SetAppAccessFormat&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="PEAR" source="x_587457_pear"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PEAR"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_b5eb46a74709b210c361f19f016d4327&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-11-12 18:00:03&lt;/sys_updated_on&gt;&lt;table&gt;x_587457_pear_app_access_format&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>590180200</payload_hash>
+        <record_name>PEAR_SetAppAccessFormat</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 18:00:04</sys_created_on>
+        <sys_id>f1769a2f4749b210c361f19f016d4357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a793985640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 18:00:04</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>7976d62f2349b2102c187215a692b908</update_guid>
+        <update_guid_history>7976d62f2349b2102c187215a692b908:590180200,be0696ebee49b210cd63df6e7e75040e:-26690659,44a5daabe049b2102aa9ccc75bda19be:-785001510,167516a7c609b210cb0dbba673d4774c:1669788832,7a35966b5149b210baddb2e9b59ad44c:-785001510,7fb45a2b4a49b210cdc267a9078d54a7:-168130651,667416e7a649b210c2c454a33386921e:-1204562418,048d8a2b5809b210072f63f2d3469005:-935991948,f08c02e71f09b2109f7d1f426cbd76ef:-311522119,8b3c46a71f09b2103e226acb4174b530:358872565</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 18:09:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0e8afafe1b004bea9ad99f6f7072b289</sys_id>
+        <sys_metadata>b5eb46a74709b210c361f19f016d4327</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PEAR_SetAppAccessFormat</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent display_value="App access format">110a0e9a4770f210c361f19f016d43c1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_script_client_b5eb46a74709b210c361f19f016d4327</sys_update_name>
+        <sys_update_version display_value="sys_script_client_b5eb46a74709b210c361f19f016d4327">f1769a2f4749b210c361f19f016d4357</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 18:09:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

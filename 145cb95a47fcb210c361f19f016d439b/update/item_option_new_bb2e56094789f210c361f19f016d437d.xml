@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <attributes/>
         <cat_item display_value="PEAR - Access Request 2">9dab904d4749b210c361f19f016d4321</cat_item>
         <category/>
@@ -82,14 +82,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-05 00:08:59</sys_created_on>
         <sys_id>bb2e56094789f210c361f19f016d437d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Applicative access dynamic v2</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>item_option_new_bb2e56094789f210c361f19f016d437d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-05 00:10:40</sys_updated_on>
+        <sys_updated_on>2025-11-14 14:41:53</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

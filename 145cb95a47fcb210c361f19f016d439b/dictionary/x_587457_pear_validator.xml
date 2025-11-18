@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9158125e47f0f210c361f19f016d43de" label="Validator" max_length="40" name="x_587457_pear_validator" type="collection">
+        <element label="Concerned Project" max_length="1024" name="concerned_project" reference="x_587457_pear_prj_space" type="glide_list"/>
+        <element label="UID" max_length="32" name="uid" reference="x_587457_pear_pmng_user" type="reference"/>
+        <element label="Organizations" max_length="1024" name="organizations" reference="x_587457_pear_organization" type="glide_list"/>
+        <element choice="3" label="Validator type" max_length="40" name="validator_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Project validator" sequence="2" value="project_validator"/>
+                <element inactive_on_update="false" label="Business Validator" sequence="0" value="business_validator"/>
+                <element inactive_on_update="false" label="Business C3 Validator" sequence="1" value="business_c3_validator"/>
+            </choice>
+        </element>
+        <element label="Validation template ID" max_length="32" name="validation_template_id" reference="x_587457_pear_validation_template" type="reference"/>
+        <element label="Concerned Business profile" max_length="1024" name="concerned_business_profile" reference="x_587457_pear_business_profile" type="glide_list"/>
+        <index name="index">
+            <element name="uid"/>
+        </index>
+        <index name="index2">
+            <element name="validation_template_id"/>
+        </index>
+    </element>
+</database>

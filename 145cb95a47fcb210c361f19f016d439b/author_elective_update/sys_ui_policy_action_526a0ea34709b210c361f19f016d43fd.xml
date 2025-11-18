@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>true</cleared>
+        <disabled>true</disabled>
+        <field>administrative_data_3</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 17:07:36</sys_created_on>
+        <sys_id>526a0ea34709b210c361f19f016d43fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>administrative_data_3</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_526a0ea34709b210c361f19f016d43fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 17:07:36</sys_updated_on>
+        <table>x_587457_pear_app_access_format</table>
+        <ui_policy display_value="PEAR_AppAccessFormat">9af94e634709b210c361f19f016d43d7</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=526a0ea34709b210c361f19f016d43fd"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_ui_policy_action_526a0ea34709b210c361f19f016d43fd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>true</cleared><disabled>true</disabled><field>administrative_data_3</field><field_message/><field_message_type>none</field_message_type><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-11-12 17:07:36</sys_created_on><sys_id>526a0ea34709b210c361f19f016d43fd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>administrative_data_3</sys_name><sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package><sys_policy/><sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope><sys_update_name>sys_ui_policy_action_526a0ea34709b210c361f19f016d43fd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-11-12 17:07:36</sys_updated_on><table>x_587457_pear_app_access_format</table><ui_policy display_value="PEAR_AppAccessFormat">9af94e634709b210c361f19f016d43d7</ui_policy><value/><value_action>ignore</value_action><visible>false</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=526a0ea34709b210c361f19f016d43fd"/></record_update>]]></payload>
+        <payload_hash>1415453679</payload_hash>
+        <record_name>administrative_data_3</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 17:07:36</sys_created_on>
+        <sys_id>5d7a4ea34709b210c361f19f016d4307</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a79097d0c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 17:07:36</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>917a4ea34509b210ff1a625ec9978507</update_guid>
+        <update_guid_history>917a4ea34509b210ff1a625ec9978507:1415453679</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 17:10:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>6e0adafd5e184ce490cb7a73b73d5de9</sys_id>
+        <sys_metadata>526a0ea34709b210c361f19f016d43fd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>administrative_data_3</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent display_value="PEAR_AppAccessFormatAdminData1">9af94e634709b210c361f19f016d43d7</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_526a0ea34709b210c361f19f016d43fd</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_526a0ea34709b210c361f19f016d43fd">5d7a4ea34709b210c361f19f016d4307</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-12 17:10:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

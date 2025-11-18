@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item/>
+        <catalog_variable>IO:c70f169b47f47210c361f19f016d4372</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 14:28:49</sys_created_on>
+        <sys_id>975910c54749b210c361f19f016d43fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>projects_mrvs</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_975910c54749b210c361f19f016d43fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 14:28:49</sys_updated_on>
+        <table/>
+        <ui_policy display_value="MRVS - BusinessProfileEmpty">58495c854749b210c361f19f016d4351</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>projects_mrvs</variable>
+        <variable_set display_value="PEAR MRVS">ccdd56d747f47210c361f19f016d433c</variable_set>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=975910c54749b210c361f19f016d43fc"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>catalog_ui_policy_action_975910c54749b210c361f19f016d43fc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item/><catalog_variable>IO:c70f169b47f47210c361f19f016d4372</catalog_variable><cleared>false</cleared><disabled>ignore</disabled><field/><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-11-04 14:28:49</sys_created_on><sys_id>975910c54749b210c361f19f016d43fc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>projects_mrvs</sys_name><sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package><sys_policy/><sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope><sys_update_name>catalog_ui_policy_action_975910c54749b210c361f19f016d43fc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-11-04 14:28:49</sys_updated_on><table/><ui_policy display_value="MRVS - BusinessProfileEmpty">58495c854749b210c361f19f016d4351</ui_policy><value/><value_action>ignore</value_action><variable>projects_mrvs</variable><variable_set display_value="PEAR MRVS">ccdd56d747f47210c361f19f016d433c</variable_set><visible>false</visible></catalog_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=975910c54749b210c361f19f016d43fc"/></record_update>]]></payload>
+        <payload_hash>1474549900</payload_hash>
+        <record_name>projects_mrvs</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 14:28:49</sys_created_on>
+        <sys_id>dd6950c54749b210c361f19f016d43fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a4f453de50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 14:28:49</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>156950c51049b21026aba87749ef85fd</update_guid>
+        <update_guid_history>156950c51049b21026aba87749ef85fd:1474549900</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="projects_mrvs">9ce9d0094749b210c361f19f016d435c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 14:30:55</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>2529dc53f7ec4748936f1cedb9c9fbc4</sys_id>
+        <sys_metadata>975910c54749b210c361f19f016d43fc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>projects_mrvs</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_975910c54749b210c361f19f016d43fc</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_975910c54749b210c361f19f016d43fc">dd6950c54749b210c361f19f016d43fd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 14:30:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

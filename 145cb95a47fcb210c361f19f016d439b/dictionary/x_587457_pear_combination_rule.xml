@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7e02812b478d7210c361f19f016d4336" label="Combination rule" max_length="40" name="x_587457_pear_combination_rule" type="collection">
+        <element choice="1" label="Rule type" max_length="40" name="rule_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="forbidden" value="forbidden"/>
+                <element inactive_on_update="false" label="allowed" value="allowed"/>
+            </choice>
+        </element>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element dependent="type" dependent_on_field="type" label="Source ID" max_length="32" name="source_id" type="document_id" use_dependent_field="true"/>
+        <element dependent="type" dependent_on_field="type" label="Target ID" max_length="32" name="target_id" type="document_id" use_dependent_field="true"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="License" value="x_587457_pear_license"/>
+                <element inactive_on_update="false" label="Business profile" value="x_587457_pear_business_profile"/>
+                <element inactive_on_update="false" label="Access profile" value="x_587457_pear_access_profile"/>
+                <element inactive_on_update="false" label="Applicative access" value="x_587457_pear_applicative_access"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="source_id"/>
+        </index>
+        <index name="index2">
+            <element name="target_id"/>
+        </index>
+    </element>
+</database>

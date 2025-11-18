@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="337606924770f210c361f19f016d43e9" label="Prj space" max_length="40" name="x_587457_pear_prj_space" type="collection">
+        <element label="Enable" max_length="40" name="enable" type="boolean"/>
+        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <element choice="3" label="Project Subtype" max_length="40" name="project_subtype" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Integration" sequence="3" value="integration"/>
+                <element inactive_on_update="false" label="Innovation" sequence="7" value="innovation"/>
+                <element inactive_on_update="false" label="Collaboration" sequence="4" value="collaboration"/>
+                <element inactive_on_update="false" label="Simulation" sequence="1" value="simulation"/>
+                <element inactive_on_update="false" label="Infrastructure" sequence="5" value="infrastructure"/>
+                <element inactive_on_update="false" label="Testing" sequence="2" value="testing"/>
+                <element inactive_on_update="false" label="Design" sequence="0" value="design"/>
+                <element inactive_on_update="false" label="Data Management" sequence="6" value="data_management"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Project space ID" max_length="40" name="number" type="string"/>
+        <element choice="3" label="Visibility" max_length="40" name="visibility" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Protected" sequence="1" value="protected"/>
+                <element inactive_on_update="false" label="Public" sequence="0" value="public"/>
+                <element inactive_on_update="false" label="Private" sequence="2" value="private"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="100" name="description" type="string"/>
+        <element choice="3" label="Project type" max_length="40" name="project_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="IT" sequence="1" value="it"/>
+                <element inactive_on_update="false" label="Engineering" sequence="0" value="engineering"/>
+                <element inactive_on_update="false" label="Simulation" sequence="2" value="simulation"/>
+                <element inactive_on_update="false" label="Testing" sequence="3" value="testing"/>
+                <element inactive_on_update="false" label="Collaboration" sequence="4" value="collaboration"/>
+            </choice>
+        </element>
+        <element label="Project Maturity" max_length="40" name="project_maturity" type="string"/>
+        <element label="Collaborative space" max_length="32" name="collaborative_space" reference="x_587457_pear_collaborative_space" type="reference"/>
+        <index name="index">
+            <element name="collaborative_space"/>
+        </index>
+    </element>
+</database>

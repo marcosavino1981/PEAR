@@ -21,7 +21,7 @@
 		label.push(current.getDisplayValue('group'))		
 	if(!gs.nil(current.company))
 		label.push(current.getDisplayValue('company'))		
-	return label.toString().replace(',',separator);  // return the calculated value
+	return label.toString().replaceAll(',',separator);  // return the calculated value
 
 })(current);]]></calculation>
         <choice/>
@@ -66,14 +66,13 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-27 09:41:14</sys_created_on>
-        <sys_id>36da0e1e4770f210c361f19f016d43d3</sys_id>
         <sys_name>Label</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_dictionary_x_587457_pear_business_part_of_app_access_label</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-13 21:17:31</sys_updated_on>
+        <sys_updated_on>2025-11-13 23:51:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

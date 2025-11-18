@@ -8,7 +8,7 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>PEAR_BusinessPartViewBasedOnAppFormat</name>
+        <name>PEAR_BusinessPartBasedOnAppFormat</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (isLoading && newValue === '') {
@@ -72,15 +72,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a1062e347c9b210c361f19f016d43c4</sys_id>
-        <sys_mod_count>47</sys_mod_count>
-        <sys_name>PEAR_BusinessPartViewBasedOnAppFormat</sys_name>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name>PEAR_BusinessPartBasedOnAppFormat</sys_name>
         <sys_overrides/>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_script_client_5a1062e347c9b210c361f19f016d43c4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-13 21:21:57</sys_updated_on>
+        <sys_updated_on>2025-11-13 23:41:33</sys_updated_on>
         <table>x_587457_pear_business_part_of_app_access</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="07b1ce964730f210c361f19f016d439b" label="User Type" max_length="40" name="x_587457_pear_user_type" type="collection">
+        <element label="LW code" max_length="40" name="lw_code" type="string"/>
+        <element label="External company" max_length="32" name="external_company" reference="core_company" type="reference"/>
+        <element label="Group" max_length="32" name="group" reference="sys_user_group" type="reference"/>
+        <element label="History company" max_length="32" name="history_company" reference="core_company" type="reference"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element display="true" label="Label" max_length="40" name="label" type="string" unique="true"/>
+        <element choice="3" label="Employee subtype" max_length="40" name="employee_subtype" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Engineer" sequence="0" value="engineer"/>
+                <element inactive_on_update="false" label="Project Manager" sequence="1" value="project_manager"/>
+                <element inactive_on_update="false" label="Technician" sequence="2" value="technician"/>
+                <element inactive_on_update="false" label="Supplier" sequence="3" value="supplier"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="User type ID" max_length="40" name="number" type="string"/>
+        <element choice="3" label="Employee type" max_length="40" name="employee_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Full Time" sequence="1" value="full_time"/>
+                <element inactive_on_update="false" label="External" sequence="2" value="external"/>
+                <element inactive_on_update="false" label="Partner" sequence="3" value="partner"/>
+                <element inactive_on_update="false" label="Contractor" sequence="0" value="contractor"/>
+            </choice>
+        </element>
+        <element choice="1" label="Internal/External" max_length="40" name="internal_external" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="internal" sequence="0" value="internal"/>
+                <element inactive_on_update="false" label="external" sequence="1" value="external"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="external_company"/>
+        </index>
+        <index name="index2">
+            <element name="group"/>
+        </index>
+        <index name="index3">
+            <element name="history_company"/>
+        </index>
+        <index name="index4" unique="true">
+            <element name="label"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a7cb06de4770f210c361f19f016d4321" label="License" max_length="40" name="x_587457_pear_license" type="collection">
+        <element label="App ID" max_length="32" name="app_id" reference="x_587457_pear_application" type="reference"/>
+        <element label="Max number" max_length="40" name="max_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="License ID" max_length="40" name="number" type="string"/>
+        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <index name="index">
+            <element name="app_id"/>
+        </index>
+    </element>
+</database>

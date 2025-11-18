@@ -15,7 +15,7 @@
         <label>Collaborative space</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>x_587457_pear_collaborative_space</name>
-        <number_ref/>
+        <number_ref display_value="SPC">87ed4a1647b0f210c361f19f016d4304</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>

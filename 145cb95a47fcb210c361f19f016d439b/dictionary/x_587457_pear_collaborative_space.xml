@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1acd421647b0f210c361f19f016d437a" label="Collaborative space" max_length="40" name="x_587457_pear_collaborative_space" type="collection">
+        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Collaborative space ID" max_length="40" name="number" type="string"/>
+        <element label="Enable" max_length="40" name="enable" type="boolean"/>
+        <element label="Project space ID" max_length="32" name="project_space_id" reference="x_587457_pear_prj_space" type="reference"/>
+        <element label="Description" max_length="200" name="description" type="string"/>
+        <index name="index">
+            <element name="project_space_id"/>
+        </index>
+    </element>
+</database>

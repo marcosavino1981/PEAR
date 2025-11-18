@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="110a0e9a4770f210c361f19f016d43c1" label="App access format" max_length="40" name="x_587457_pear_app_access_format" type="collection">
+        <element choice="1" label="Administrative data 3" max_length="40" name="administrative_data_3" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Company" value="company"/>
+                <element inactive_on_update="false" label="Project" value="project"/>
+                <element inactive_on_update="false" label="Organization" value="organization"/>
+                <element inactive_on_update="false" label="Business unit" value="business_unit"/>
+                <element inactive_on_update="false" label="Group" value="group"/>
+                <element inactive_on_update="false" label="Technical role" value="technical_role"/>
+            </choice>
+        </element>
+        <element choice="1" label="Administrative data 1" mandatory="true" max_length="40" name="administrative_data_1" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Technical_role" value="technical_role"/>
+                <element inactive_on_update="false" label="Business unit" value="business_unit"/>
+                <element inactive_on_update="false" label="Group" value="group"/>
+                <element inactive_on_update="false" label="Organization" value="organization"/>
+                <element inactive_on_update="false" label="Company" value="company"/>
+                <element inactive_on_update="false" label="Project" value="project"/>
+            </choice>
+        </element>
+        <element display="true" label="Format" max_length="500" name="format" read_only="true" type="string"/>
+        <element choice="1" label="Administrative data 2" max_length="40" name="administrative_data_2" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Group" value="group"/>
+                <element inactive_on_update="false" label="Business unit" value="business_unit"/>
+                <element inactive_on_update="false" label="Project" value="project"/>
+                <element inactive_on_update="false" label="Technical role" value="technical_role"/>
+                <element inactive_on_update="false" label="Company" value="company"/>
+                <element inactive_on_update="false" label="Organization" value="organization"/>
+            </choice>
+        </element>
+        <element choice="1" label="Separator" max_length="40" name="separator" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="," value=","/>
+                <element inactive_on_update="false" label=";" value=";"/>
+                <element inactive_on_update="false" label="." value="."/>
+            </choice>
+        </element>
+    </element>
+</database>
