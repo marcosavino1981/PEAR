@@ -44,7 +44,7 @@
       table.style.display   = 'none';&#13;
       body.innerHTML = '';&#13;
 &#13;
-      var ga = new GlideAjax('x_587457_pear.PEAR_Utils3'); // se scoped: 'x_587457_pear.PEAR_PreviewAPI'&#13;
+      var ga = new GlideAjax('x_587457_pear.PEAR_Utils3');&#13;
       ga.addParam('sysparm_name','getApplicativeAccessByBp_v3');&#13;
       ga.addParam('sysparm_rowsJson', rowsJSON);&#13;
       ga.getXMLAnswer(function(answer){&#13;
@@ -53,7 +53,7 @@
         try { data = JSON.parse(answer || '[]'); } catch(e) {}&#13;
         data.forEach(function(row){&#13;
           var tr = document.createElement('tr');&#13;
-          ['business_part','number','label','app_id','app_access_format','technical_role','business_unit','organization','project','group','company'].forEach(function(f){&#13;
+          ['business_part','number','label','application','app_access_format','technical_role','business_unit','organization','project','group','company'].forEach(function(f){&#13;
             var td = document.createElement('td');&#13;
             td.textContent = row[f] || '';&#13;
             tr.appendChild(td);&#13;
@@ -80,13 +80,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-14 14:41:02</sys_created_on>
         <sys_id>751c3340471d3210c361f19f016d430c</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Applicative Access Preview - Dynamic v3</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_ui_page_751c3340471d3210c361f19f016d430c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-14 22:35:21</sys_updated_on>
+        <sys_updated_on>2025-11-19 18:27:25</sys_updated_on>
     </sys_ui_page>
 </record_update>

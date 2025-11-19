@@ -2,13 +2,18 @@
     <element db_object_id="21fa425e4770f210c361f19f016d43d1" label="Business profile" max_length="40" name="x_587457_pear_business_profile" type="collection">
         <element label="Licenses" max_length="4000" name="license" read_only="true" reference="x_587457_pear_license" type="glide_list"/>
         <element label="Requested PMNG trainings" max_length="40" name="requested_pmng_trainings" reference="x_587457_pear_required_training" type="glide_list"/>
-        <element label="status" max_length="40" name="status" type="string"/>
+        <element choice="1" label="status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Enable" value="enable"/>
+                <element inactive_on_update="false" label="Disable" value="disable"/>
+            </choice>
+        </element>
         <element label="Access profiles" max_length="4000" name="access_profile" read_only="true" reference="x_587457_pear_access_profile" type="glide_list"/>
         <element label="c3" max_length="40" name="c3" type="boolean"/>
         <element label="User types" max_length="4000" name="user_type" read_only="true" reference="x_587457_pear_user_type" type="glide_list"/>
-        <element display="true" label="Label" max_length="100" name="label" type="string"/>
+        <element display="true" label="Label" mandatory="true" max_length="100" name="label" type="string"/>
         <element label="Applications" max_length="32" name="application" read_only="true" reference="x_587457_pear_application" type="glide_list"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Business profile ID" max_length="40" name="number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Business profile ID" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Description" max_length="40" name="description" type="string"/>
         <element label="PMNG users Job Title list" max_length="40" name="pmng_users_job_title_list" type="string"/>
         <index name="index">

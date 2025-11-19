@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="license_id" table="x_587457_pear_business_part_of_app_access">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Licenses</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>license_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">glide_list</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <name>x_587457_pear_business_part_of_app_access</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_587457_pear_license">x_587457_pear_license</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>javascript: 'app_id=' + current.app_id</reference_qual>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-27 09:47:38</sys_created_on>
+        <sys_id>ec5c8a1247b0f210c361f19f016d438a</sys_id>
+        <sys_name>Licenses</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_dictionary_x_587457_pear_business_part_of_app_access_license_id</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-06 10:04:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_dictionary_x_587457_pear_business_part_of_app_access_license_id</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="license_id" table="x_587457_pear_business_part_of_app_access"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><column_label>Licenses</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>license_id</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="">glide_list</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>x_587457_pear_business_part_of_app_access</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference display_value="" name="x_587457_pear_license">x_587457_pear_license</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual>javascript: 'app_id=' + current.app_id</reference_qual><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-27 09:47:38</sys_created_on><sys_id>ec5c8a1247b0f210c361f19f016d438a</sys_id><sys_name>Licenses</sys_name><sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package><sys_policy/><sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope><sys_update_name>sys_dictionary_x_587457_pear_business_part_of_app_access_license_id</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-11-06 10:04:27</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>1460313167</payload_hash>
+        <record_name>Business part of app access.Licenses</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-06 10:04:27</sys_created_on>
+        <sys_id>5410716d47053210c361f19f016d432a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a589fed5f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-06 10:04:27</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>d410716d1c053210cad0e882a3f22b29</update_guid>
+        <update_guid_history>d410716d1c053210cad0e882a3f22b29:1460313167,feefa9e94e0532101c2224e22e220c5c:-812932859,ee1486b2baf432100f312f9f82030422:1981567065,c13dacb6f5fcb210ae1d963a65ce4600:-427770949,303d6cb637fcb210ef87d3f9250807e9:-1839905205,c15cca1210b0f210707b2d1b81590131:-1837733255,385c8a129db0f210f65f29baaaed9acb:317843466</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 22:43:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>1dc08f87369e48288b7fc67a32831119</sys_id>
+        <sys_metadata>ec5c8a1247b0f210c361f19f016d438a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Licenses</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent display_value="Business part of app access">9ffef1124730f210c361f19f016d434d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_587457_pear_business_part_of_app_access_license_id</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_587457_pear_business_part_of_app_access_license_id">5410716d47053210c361f19f016d432a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 22:43:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

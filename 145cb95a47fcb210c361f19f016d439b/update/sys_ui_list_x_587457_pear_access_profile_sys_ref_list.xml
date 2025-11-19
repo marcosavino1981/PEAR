@@ -3,17 +3,32 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>label</element>
-            <list_id display_value="x_587457_pear_access_profile" element="NULL" name="x_587457_pear_access_profile" parent="NULL" relationship="NULL" sys_domain="global" view="285090639820221055904c91e2b654a9">146cd5234781b210c361f19f016d433c</list_id>
+            <list_id display_value="x_587457_pear_access_profile" element="NULL" name="x_587457_pear_access_profile" parent="NULL" relationship="NULL" sys_domain="global" view="285090639820221055904c91e2b654a9">b0ca5ef94791b210c361f19f016d434c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-12 13:46:17</sys_created_on>
-            <sys_id>586cd5234781b210c361f19f016d433d</sys_id>
+            <sys_created_on>2025-11-19 18:05:09</sys_created_on>
+            <sys_id>3cca5ef94791b210c361f19f016d43fa</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-12 13:46:17</sys_updated_on>
+            <sys_updated_on>2025-11-19 18:05:09</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>application</element>
+            <list_id display_value="x_587457_pear_access_profile" element="NULL" name="x_587457_pear_access_profile" parent="NULL" relationship="NULL" sys_domain="global" view="285090639820221055904c91e2b654a9">b0ca5ef94791b210c361f19f016d434c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 18:05:09</sys_created_on>
+            <sys_id>30ca5ef94791b210c361f19f016d43fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 18:05:09</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -27,10 +42,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-12 13:46:17</sys_created_on>
+            <sys_created_on>2025-11-19 18:05:09</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>146cd5234781b210c361f19f016d433c</sys_id>
+            <sys_id>b0ca5ef94791b210c361f19f016d434c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_587457_pear_access_profile</sys_name>
             <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -38,7 +53,7 @@
             <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
             <sys_update_name>sys_ui_list_x_587457_pear_access_profile_sys_ref_list</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-12 13:46:17</sys_updated_on>
+            <sys_updated_on>2025-11-19 18:05:09</sys_updated_on>
             <sys_user/>
             <view display_value="Reference List" name="sys_ref_list">285090639820221055904c91e2b654a9</view>
             <view_name/>

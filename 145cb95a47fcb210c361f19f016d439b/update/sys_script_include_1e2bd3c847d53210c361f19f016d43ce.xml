@@ -12,6 +12,7 @@
         <script><![CDATA[var PEAR_Utils3 = Class.create();
 PEAR_Utils3.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
+
 getUserTypesOfBusinessProfile: function(bp_sysId) {
 
 	if (!bp_sysId) {
@@ -101,8 +102,8 @@ getApplicationsOfBusinessProfile: function(bp_sysId) {
 		bpa.addQuery('business_profile_id',bp_sysId)
 		bpa.query();
 		while(bpa.next())
-			if(!applications.toString().contains(bpa.app_id.toString()))
-				applications.push(bpa.app_id.toString())
+			if(!applications.toString().contains(bpa.application.toString()))
+				applications.push(bpa.application.toString())
 
 		if(applications.length ==0)
 			return 'sys_id=XYZ';
@@ -127,7 +128,7 @@ getConcernedfBusinessPartsOfApplicativeAccess: function(aa_sysId) {
 		if(aa.get(aa_sysId) /*&& bp.status == 'enable'*/)
 		{
 			var bp = new GlideRecord('x_587457_pear_business_part_of_app_access');
-			bp.addQuery('app_id',aa.app_id)
+			bp.addQuery('application',aa.application)
 			bp.query();
 			var concernerdBp;
 			while(bp.next())
@@ -217,8 +218,8 @@ getApplicativeAccessByBp_v3: function(rowsJson) {
 					business_part: parts.getValue('label'),
 					number: aa.getDisplayValue('number'),
 					label: aa.getDisplayValue('label'),
-					app_id: aa.getDisplayValue('app_id'),
-					app_access_format: aa.app_id.applicative_access_format.format.toString(),
+					application: aa.getDisplayValue('application'),
+					app_access_format: aa.application.applicative_access_format.format.toString(),
 					technical_role: aa.getDisplayValue('technical_role'),
 					business_unit: aa.getDisplayValue('business_unit'),
 					organization: aa.getDisplayValue('organization'),
@@ -308,8 +309,8 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 				business_part: parts.getValue('label'),
                 number: aa.getDisplayValue('number'),
                 label: aa.getDisplayValue('label'),
-                app_id: aa.getDisplayValue('app_id'),
-                app_access_format: aa.app_id.applicative_access_format.format.toString(),
+                application: aa.getDisplayValue('application'),
+                app_access_format: aa.application.applicative_access_format.format.toString(),
                 technical_role: aa.getDisplayValue('technical_role'),
                 business_unit: aa.getDisplayValue('business_unit'),
                 organization: aa.getDisplayValue('organization'),
@@ -370,12 +371,12 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
       aa.query();
       while (aa.next()) {
 
-		var format = aa.app_id.applicative_access_format.format.toString();
+		var format = aa.application.applicative_access_format.format.toString();
 		// out.push({
 		outMap[aa.getUniqueValue()] = {
 			number: aa.getDisplayValue('number'),
 			label: aa.getValue('label'),
-			app_id: aa.getDisplayValue('app_id'),
+			application: aa.getDisplayValue('application'),
 			app_access_format: format,
 			technical_role: aa.getDisplayValue('technical_role'),
 			business_unit : aa.getDisplayValue('business_unit'),
@@ -435,6 +436,7 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 		gs.info('getBusinessProfilesByUser START for user ' + gs.getUserID() + ' User Type: ' + pmng_user.user_type);
 		var bp_array = [];
 		var bp = new GlideRecord('x_587457_pear_business_profile');
+		bp.addQuery('status','enable');
 		bp.addEncodedQuery("user_typeLIKE" + pmng_user.user_type);
 		bp.query();
 		while(bp.next())
@@ -472,6 +474,7 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 			// gs.info('getConcernedApplicativeAccessOfBusinessPart bp_LabelCompontents ' + bp_LabelCompontents.toString());
 
 			var aa = new GlideRecord('x_587457_pear_applicative_access');
+			aa.addQuery('enable',true);
 			for(j=0;j<bp_LabelCompontents.length;j++)
 			{
 				// gs.info('getConcernedApplicativeAccessOfBusinessPart bp_LabelCompontents[j] ' + bp_LabelCompontents[j] + ' > ' + bp.getValue(bp_LabelCompontents[j]))
@@ -515,13 +518,13 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-14 12:17:09</sys_created_on>
         <sys_id>1e2bd3c847d53210c361f19f016d43ce</sys_id>
-        <sys_mod_count>142</sys_mod_count>
+        <sys_mod_count>150</sys_mod_count>
         <sys_name>PEAR_Utils3</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_script_include_1e2bd3c847d53210c361f19f016d43ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-19 12:00:43</sys_updated_on>
+        <sys_updated_on>2025-11-19 23:05:14</sys_updated_on>
     </sys_script_include>
 </record_update>

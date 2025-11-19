@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_587457_pear_Applicative Access Preview.do</endpoint>
+        <html><![CDATA[<j:jelly xmlns:j="jelly:core" xmlns:g="glide">
+  <div id="pear-static-aa" style="margin-top:10px;">
+    <h4>Applicative Access (static preview)</h4>
+    <table class="table table-bordered table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Applicative Access</th>
+          <th>Application</th>
+          <th>Business Part</th>
+          <th>Project</th>
+          <th>Technical Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CATIA Author</td>
+          <td>CATIA</td>
+          <td>Design Engineer</td>
+          <td>PRJ-A001</td>
+          <td>CAD Role</td>
+        </tr>
+        <tr>
+          <td>ENOVIA Reviewer</td>
+          <td>ENOVIA</td>
+          <td>Reviewer</td>
+          <td>PRJ-B002</td>
+          <td>PLM Reviewer</td>
+        </tr>
+        <tr>
+          <td>SIMULIA Analyst</td>
+          <td>Abaqus</td>
+          <td>Simulation</td>
+          <td>PRJ-C003</td>
+          <td>Analyst Role</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</j:jelly>
+]]></html>
+        <name>Applicative Access Preview</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 16:27:21</sys_created_on>
+        <sys_id>5a64bc01474db210c361f19f016d4319</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Applicative Access Preview</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_ui_page_5a64bc01474db210c361f19f016d4319</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 16:32:17</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_ui_page_5a64bc01474db210c361f19f016d4319</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_587457_pear_Applicative Access Preview.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;j:jelly xmlns:j="jelly:core" xmlns:g="glide"&gt;
+  &lt;div id="pear-static-aa" style="margin-top:10px;"&gt;
+    &lt;h4&gt;Applicative Access (static preview)&lt;/h4&gt;
+    &lt;table class="table table-bordered table-striped table-sm"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Applicative Access&lt;/th&gt;
+          &lt;th&gt;Application&lt;/th&gt;
+          &lt;th&gt;Business Part&lt;/th&gt;
+          &lt;th&gt;Project&lt;/th&gt;
+          &lt;th&gt;Technical Role&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;CATIA Author&lt;/td&gt;
+          &lt;td&gt;CATIA&lt;/td&gt;
+          &lt;td&gt;Design Engineer&lt;/td&gt;
+          &lt;td&gt;PRJ-A001&lt;/td&gt;
+          &lt;td&gt;CAD Role&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;ENOVIA Reviewer&lt;/td&gt;
+          &lt;td&gt;ENOVIA&lt;/td&gt;
+          &lt;td&gt;Reviewer&lt;/td&gt;
+          &lt;td&gt;PRJ-B002&lt;/td&gt;
+          &lt;td&gt;PLM Reviewer&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;SIMULIA Analyst&lt;/td&gt;
+          &lt;td&gt;Abaqus&lt;/td&gt;
+          &lt;td&gt;Simulation&lt;/td&gt;
+          &lt;td&gt;PRJ-C003&lt;/td&gt;
+          &lt;td&gt;Analyst Role&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/j:jelly&gt;
+]]&gt;&lt;/html&gt;&lt;name&gt;Applicative Access Preview&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-11-04 16:27:21&lt;/sys_created_on&gt;&lt;sys_id&gt;5a64bc01474db210c361f19f016d4319&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Applicative Access Preview&lt;/sys_name&gt;&lt;sys_package display_value="PEAR" source="x_587457_pear"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PEAR"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_5a64bc01474db210c361f19f016d4319&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-11-04 16:32:17&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-498472813</payload_hash>
+        <record_name>Applicative Access Preview</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 16:32:17</sys_created_on>
+        <sys_id>02a5fcc1474db210c361f19f016d4302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a4fb6485f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 16:32:17</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>c2a57cc1804db210038535eea277dbca</update_guid>
+        <update_guid_history>c2a57cc1804db210038535eea277dbca:-498472813,108578c19e4db210ccef92b55175d716:2104861067,f184b041264db210879b6f36caa7eb5d:-498472813</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 18:23:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>6a20f96fb1814a608ee7d90f7dd40900</sys_id>
+        <sys_metadata>5a64bc01474db210c361f19f016d4319</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Applicative Access Preview</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_ui_page_5a64bc01474db210c361f19f016d4319</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_5a64bc01474db210c361f19f016d4319">02a5fcc1474db210c361f19f016d4302</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 18:23:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

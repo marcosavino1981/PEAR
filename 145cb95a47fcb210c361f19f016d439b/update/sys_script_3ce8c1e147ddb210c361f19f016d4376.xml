@@ -30,7 +30,7 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Automatic update of the User Type on the corresponding applicative access - START
-	gs.addInfoMessage('BR PEAR - AIU-BPa triggered by the update of Bpa ' + current.label);
+	gs.addInfoMessage('BR PEAR - AIU-BPa triggered by the update of Bpa ' + current.display_name);
 	var aa_user_type = [];
 	var bpa_user_type;
 	var bpa_aa = [];
@@ -40,13 +40,13 @@
 	aa.query();
 	while(aa.next())
 	{
-		// gs.addInfoMessage("aa " + aa.label)
 		bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
 		bpa.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getConcernedfBusinessPartsOfApplicativeAccess(aa.sys_id));
 		bpa.query();
 		while(bpa.next())
 		{
-			bpa_aa.push(bpa.sys_id.toString());
+			if(!bpa_aa.toString().contains(bpa.sys_id.toString()))
+				bpa_aa.push(bpa.sys_id.toString());
 			// gs.addInfoMessage("aa " + aa.label + ' bpa ' + bpa.label + ' bpa user types ' + bpa.user_type_list);
 			bpa_user_type = bpa.user_type_list.toString().split(',')
 			for(i=0;i<bpa_user_type.length;i++)
@@ -93,6 +93,7 @@
 	var access_profiles = [];
 	var ap = new GlideRecord('x_587457_pear_access_profile');
 	ap.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getAccessProfilesOfBusinessProfile(bp.sys_id));
+	ap.orderBy('label');
 	ap.query();
 	while(ap.next())
 		access_profiles.push(ap.sys_id.toString())
@@ -101,6 +102,7 @@
 	var licenses = [];
 	var l = new GlideRecord('x_587457_pear_license');
 	l.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getLicensesOfBusinessProfile(bp.sys_id));
+	l.orderBy('label');
 	l.query();
 	while(l.next())
 		licenses.push(l.sys_id.toString());
@@ -113,6 +115,20 @@
 
 
 
+	// Automatic update of Business Part (concerned applicative access) - START
+
+	var bpa_aa = [];
+	var aa = new GlideRecord('x_587457_pear_applicative_access');
+	aa.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getConcernedApplicativeAccessOfBusinessPart(current.sys_id));
+	aa.query();
+	while(aa.next())
+		bpa_aa.push(aa.sys_id.toString())
+
+	current.applicative_access = bpa_aa.toString();
+	current.update();
+	// Automatic update of Business Part (concerned applicative access) - END	
+
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -120,7 +136,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3ce8c1e147ddb210c361f19f016d4376</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>PEAR - AIU-BPa</sys_name>
         <sys_overrides/>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -128,7 +144,7 @@
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_script_3ce8c1e147ddb210c361f19f016d4376</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-19 14:05:38</sys_updated_on>
+        <sys_updated_on>2025-11-19 22:51:40</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

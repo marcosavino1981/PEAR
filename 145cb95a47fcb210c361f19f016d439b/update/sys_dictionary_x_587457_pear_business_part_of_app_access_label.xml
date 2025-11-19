@@ -7,7 +7,7 @@
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
-	var separator = current.app_id.applicative_access_format.separator;
+	var separator = current.application.applicative_access_format.separator;
 	var label = [];
 	if(!gs.nil(current.technical_role))
 		label.push(current.getDisplayValue('technical_role'))
@@ -72,7 +72,7 @@
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_dictionary_x_587457_pear_business_part_of_app_access_label</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-13 23:51:04</sys_updated_on>
+        <sys_updated_on>2025-11-19 18:01:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

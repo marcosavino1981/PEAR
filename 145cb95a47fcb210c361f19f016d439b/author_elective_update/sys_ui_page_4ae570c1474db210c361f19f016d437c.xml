@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_587457_pear_Applicative Access Preview - Dynamic.do</endpoint>
+        <html><![CDATA[<j:jelly xmlns:j="jelly:core" xmlns:g="glide">
+  <div id="pear-aa-container">
+    <h4>Applicative Access (Dynamic Preview)</h4>
+    <div id="pear-aa-loading">Loading data...</div>
+    <table id="pear-aa-table" class="table table-bordered table-striped table-sm" style="display:none;">
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th>Application</th>
+          <th>Business Part</th>
+          <th>Project</th>
+          <th>Technical Role</th>
+        </tr>
+      </thead>
+      <tbody id="pear-aa-body"></tbody>
+    </table>
+  </div>
+
+  <script>
+    // Chiamata GlideAjax per recuperare i record reali
+    addLoadEvent(function() {
+      var ga = new GlideAjax('x_587457_pear.PEAR_PreviewAPI');
+      ga.addParam('sysparm_name', 'getApplicativeAccess');
+      ga.getXMLAnswer(function(answer) {
+        try {
+          var data = JSON.parse(answer || '[]');
+          var table = document.getElementById('pear-aa-table');
+          var body = document.getElementById('pear-aa-body');
+          var loading = document.getElementById('pear-aa-loading');
+          loading.style.display = 'none';
+          table.style.display = 'table';
+          data.forEach(function(row) {
+            var tr = document.createElement('tr');
+            ['label','application','business_part','project','technical_role'].forEach(function(f) {
+              var td = document.createElement('td');
+              td.textContent = row[f] || '';
+              tr.appendChild(td);
+            });
+            body.appendChild(tr);
+          });
+        } catch(e) {
+          document.getElementById('pear-aa-loading').textContent = 'Error loading data';
+        }
+      });
+    });
+  </script>
+</j:jelly>
+]]></html>
+        <name>Applicative Access Preview - Dynamic</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 16:33:23</sys_created_on>
+        <sys_id>4ae570c1474db210c361f19f016d437c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Applicative Access Preview - Dynamic</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_ui_page_4ae570c1474db210c361f19f016d437c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 17:52:03</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_ui_page_4ae570c1474db210c361f19f016d437c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_587457_pear_Applicative Access Preview - Dynamic.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;j:jelly xmlns:j="jelly:core" xmlns:g="glide"&gt;
+  &lt;div id="pear-aa-container"&gt;
+    &lt;h4&gt;Applicative Access (Dynamic Preview)&lt;/h4&gt;
+    &lt;div id="pear-aa-loading"&gt;Loading data...&lt;/div&gt;
+    &lt;table id="pear-aa-table" class="table table-bordered table-striped table-sm" style="display:none;"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Label&lt;/th&gt;
+          &lt;th&gt;Application&lt;/th&gt;
+          &lt;th&gt;Business Part&lt;/th&gt;
+          &lt;th&gt;Project&lt;/th&gt;
+          &lt;th&gt;Technical Role&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody id="pear-aa-body"&gt;&lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    // Chiamata GlideAjax per recuperare i record reali
+    addLoadEvent(function() {
+      var ga = new GlideAjax('x_587457_pear.PEAR_PreviewAPI');
+      ga.addParam('sysparm_name', 'getApplicativeAccess');
+      ga.getXMLAnswer(function(answer) {
+        try {
+          var data = JSON.parse(answer || '[]');
+          var table = document.getElementById('pear-aa-table');
+          var body = document.getElementById('pear-aa-body');
+          var loading = document.getElementById('pear-aa-loading');
+          loading.style.display = 'none';
+          table.style.display = 'table';
+          data.forEach(function(row) {
+            var tr = document.createElement('tr');
+            ['label','application','business_part','project','technical_role'].forEach(function(f) {
+              var td = document.createElement('td');
+              td.textContent = row[f] || '';
+              tr.appendChild(td);
+            });
+            body.appendChild(tr);
+          });
+        } catch(e) {
+          document.getElementById('pear-aa-loading').textContent = 'Error loading data';
+        }
+      });
+    });
+  &lt;/script&gt;
+&lt;/j:jelly&gt;
+]]&gt;&lt;/html&gt;&lt;name&gt;Applicative Access Preview - Dynamic&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-11-04 16:33:23&lt;/sys_created_on&gt;&lt;sys_id&gt;4ae570c1474db210c361f19f016d437c&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Applicative Access Preview - Dynamic&lt;/sys_name&gt;&lt;sys_package display_value="PEAR" source="x_587457_pear"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PEAR"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_4ae570c1474db210c361f19f016d437c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-11-04 17:52:03&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1103019190</payload_hash>
+        <record_name>Applicative Access Preview - Dynamic</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-04 17:52:03</sys_created_on>
+        <sys_id>aee7c18947cdb210c361f19f016d431c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a4fff517a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-04 17:52:03</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>22e7c18994cdb21019478331422b591c</update_guid>
+        <update_guid_history>22e7c18994cdb21019478331422b591c:1103019190,b7c74189a5cdb2109232f11fa8dcc1da:1840660452,4b07410968cdb21046d0607828741cc4:1103019190,fcc6cdc5c1cdb2107d2f783565d6cb14:1840660452,dd3a784d5e4db2100f7efe4a51c8123a:1103019190,64f9304df94db2101593e6ed78ddcf25:-1239528683,9819b0c94f4db21026ab6cf9d23934f3:1840660452,4236fc059e4db2106fd26853a493d583:-1350011742,4ee570c1254db2109f3fe1e303864e7d:-341570617</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 18:23:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>133da88c3dbf42fc8f0a8782f5ed94a4</sys_id>
+        <sys_metadata>4ae570c1474db210c361f19f016d437c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Applicative Access Preview - Dynamic</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_ui_page_4ae570c1474db210c361f19f016d437c</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_4ae570c1474db210c361f19f016d437c">aee7c18947cdb210c361f19f016d431c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 18:23:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

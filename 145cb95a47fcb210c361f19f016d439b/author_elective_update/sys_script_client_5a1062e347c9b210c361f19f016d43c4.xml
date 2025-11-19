@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>app_id</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>PEAR_BusinessPartBasedOnAppFormat</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading && newValue === '') {
+      return;
+   }
+
+	var AllLabels = ['technical_role','business_unit','organization','technical_role','project','group','company'];
+	for (var j = 0; j < AllLabels.length; j++) {
+		var field = AllLabels[j];
+		g_form.setReadOnly(field, true);
+		// g_form.clearValue(field)
+	}
+
+	var ga = new GlideAjax('PEAR_Utils3');
+	ga.addParam('sysparm_name', 'getApplicativeAccessFormatbyApp');
+    ga.addParam('sysparm_Application', newValue);
+    ga.getXMLAnswer(function(answer) {
+		var i;
+		var format = answer.split("|")[0];
+		var separator = answer.split("|")[1];
+		// g_form.addInfoMessage('answer ' + answer);
+		// g_form.addInfoMessage('format ' + format);
+		// g_form.addInfoMessage('separator ' + separator);
+		var LabelPartArray = format.split(separator);
+		var AllLabels = ['technical_role','business_unit','organization','technical_role','project','group','company'];
+		var CurrentLabels = [];
+
+		// g_form.setVisible('company',false);
+		for(i=0;i<LabelPartArray.length;i++)
+		{
+			CurrentLabels.push(LabelPartArray[i]);
+		}
+
+		// Imposto i campi visibili / obbligatori / readonly
+		for (var j = 0; j < AllLabels.length; j++) {
+			var field = AllLabels[j];
+			// g_form.setReadOnly(field, true);
+
+			if (CurrentLabels.indexOf(field) !== -1) {
+				// Il campo è tra quelli validi → EDITABILE + OBBLIGATORIO
+				g_form.setReadOnly(field, false);
+				// g_form.setMandatory(field, true);
+				// g_form.setVisible(field, true);
+			}
+			else {
+				// Il campo NON è nel formato → READONLY + NON OBBLIGATORIO
+				// g_form.setReadOnly(field, true);
+				g_form.setMandatory(field, false);
+				g_form.clearValue(field)
+				// g_form.setVisible(field, false);   // Se vuoi puoi anche metterlo a false
+			}
+		}
+
+
+
+    }); 
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-12 18:42:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a1062e347c9b210c361f19f016d43c4</sys_id>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>PEAR_BusinessPartBasedOnAppFormat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_client_5a1062e347c9b210c361f19f016d43c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 16:45:30</sys_updated_on>
+        <table>x_587457_pear_business_part_of_app_access</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_script_client_5a1062e347c9b210c361f19f016d43c4</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;app_id&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;PEAR_BusinessPartBasedOnAppFormat&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading &amp;&amp; newValue === '') {
+      return;
+   }
+
+	var AllLabels = ['technical_role','business_unit','organization','technical_role','project','group','company'];
+	for (var j = 0; j &lt; AllLabels.length; j++) {
+		var field = AllLabels[j];
+		g_form.setReadOnly(field, true);
+		// g_form.clearValue(field)
+	}
+
+	var ga = new GlideAjax('PEAR_Utils3');
+	ga.addParam('sysparm_name', 'getApplicativeAccessFormatbyApp');
+    ga.addParam('sysparm_Application', newValue);
+    ga.getXMLAnswer(function(answer) {
+		var i;
+		var format = answer.split("|")[0];
+		var separator = answer.split("|")[1];
+		// g_form.addInfoMessage('answer ' + answer);
+		// g_form.addInfoMessage('format ' + format);
+		// g_form.addInfoMessage('separator ' + separator);
+		var LabelPartArray = format.split(separator);
+		var AllLabels = ['technical_role','business_unit','organization','technical_role','project','group','company'];
+		var CurrentLabels = [];
+
+		// g_form.setVisible('company',false);
+		for(i=0;i&lt;LabelPartArray.length;i++)
+		{
+			CurrentLabels.push(LabelPartArray[i]);
+		}
+
+		// Imposto i campi visibili / obbligatori / readonly
+		for (var j = 0; j &lt; AllLabels.length; j++) {
+			var field = AllLabels[j];
+			// g_form.setReadOnly(field, true);
+
+			if (CurrentLabels.indexOf(field) !== -1) {
+				// Il campo è tra quelli validi → EDITABILE + OBBLIGATORIO
+				g_form.setReadOnly(field, false);
+				// g_form.setMandatory(field, true);
+				// g_form.setVisible(field, true);
+			}
+			else {
+				// Il campo NON è nel formato → READONLY + NON OBBLIGATORIO
+				// g_form.setReadOnly(field, true);
+				g_form.setMandatory(field, false);
+				g_form.clearValue(field)
+				// g_form.setVisible(field, false);   // Se vuoi puoi anche metterlo a false
+			}
+		}
+
+
+
+    }); 
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-11-12 18:42:58&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5a1062e347c9b210c361f19f016d43c4&lt;/sys_id&gt;&lt;sys_mod_count&gt;49&lt;/sys_mod_count&gt;&lt;sys_name&gt;PEAR_BusinessPartBasedOnAppFormat&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="PEAR" source="x_587457_pear"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PEAR"&gt;145cb95a47fcb210c361f19f016d439b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_5a1062e347c9b210c361f19f016d43c4&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-11-19 16:45:30&lt;/sys_updated_on&gt;&lt;table&gt;x_587457_pear_business_part_of_app_access&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>720655099</payload_hash>
+        <record_name>PEAR_BusinessPartBasedOnAppFormat</record_name>
+        <reverted_from/>
+        <source>dc2eebd147d1b210c361f19f016d437d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 16:45:30</sys_created_on>
+        <sys_id>75880ef14711b210c361f19f016d43ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a9d01c4630000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 16:45:30</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>b9880ef1e311b21007b235fb1d9b6ecd</update_guid>
+        <update_guid_history>b9880ef1e311b21007b235fb1d9b6ecd:720655099,023e64c47899b21018a7f750fcc5981b:-766803428,894e0cc48295b210b6aba577eec903c4:738714236,630ec8c4b795b210506b27502afa93ad:1013617101,fcdd0c842395b2104f757027b05561d5:1206408989,2de9a7fb3a41b21074d0501b1a5e42ed:-371313571,677f27e786413210b5d4c82b447a544c:633867681,8f2feb6ba2413210ccfa0f80059e5cb1:1368930535,7f0f2b6b674132108bf35b4cf9dfd04f:1750809259,6d9ea32b0b413210fa2cca2ed6e61073:642882210,357e27e7bb4132103a9a3b10f1934e63:-454454300,d1bda3a70a413210af4ce8cb08082d22:396886162,8e6d67673c4132107a4cfcb4b4d6ab96:1364197058,5afc2727e241321007bcd72a7ca4a1e6:-1511289978,037ce32b1b0132105c7fb5b8aa03a8cc:911540159,fb3c6f63f7413210f67e2f8d34d1e828:-1690044509,cb2ba7efe00132108314dd71b39df2a7:206224430,bc0ae727f7013210a57408a6617202b4:1054598469,5d69272f940132102f4d2310668e9799:1490511036,dc19a32fc7013210af306c4a3899d8b9:-444851274,59086f6bc10132109caccfafb6d845bc:267967238,25172b27a301321002a1e525404b8950:-1728380076,79f6a7e75c013210519d5d24d9defed1:-323282058,48f6a7e705013210ae53dcce6d4a804d:-355617942,84e6632761013210bd224c67847ac0f8:-1550256028,c3c623e7210132104623d049f0cfc788:-97110572,f25663a7470132108bfe59445545cec3:2075322462,eed52b27da013210304528e8bf987d90:1311296917,bdf3afaf53c1f210f8d076c64189fc0b:-354926561,2523ef2f2bc1f210039e39a654999778:953956059,49032b2f57c1f210b4d04f3410b1b2e2:388719847,c1d2632f92c1f2108688cc133bd863fd:-1698318424,eb2263eb43c1f2103ad4c1f1d01a90d7:-1362788896,8fd1e3ab16c1f210b83aa2d8cf0c6253:-800630671,cfb163ab8cc1f210b7cc6e3a967e39ab:1676654743,c461676b7bc1f210661e2455019da215:-1859997268,c021272306c1f2106ffba56b2a4906a9:565774627,86e0632b9fc1f210bf9c5d8ec374bae6:-853632848,4dd0afe716c1f210db6853367b8538c9:-1416893243,f790aba7a1c1f2100affe5733923a71f:690895382,f830ebafe381f21031c3c2884cc063e4:-1953342192,6a10e323dfc1f210731bd66cea4e908f:-1587268994,674f5727a0c1f210ecfb1616392bfade:1984826585,be2e57a36ac1f210abe546581cc9410b:802004040,14616e67fbc9b2105e42cfc394332614:-98441021,b331aa67f5c9b210d3e8223aaea55995:-809627512,07116667b9c9b210716cd650a73d4ef7:-98441021,61c06a2785c9b2103dc262277dcf0bd3:-541052375,e190aee3c6c9b2101d11345a6fb7742c:-1838980503,124062e3c4c9b210fba1575adb78d7ce:-496115988</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 18:01:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>03f3fb1ab2574122807e611408a294e1</sys_id>
+        <sys_metadata>5a1062e347c9b210c361f19f016d43c4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PEAR_BusinessPartBasedOnAppFormat</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent display_value="Business part of app access">9ffef1124730f210c361f19f016d434d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_script_client_5a1062e347c9b210c361f19f016d43c4</sys_update_name>
+        <sys_update_version display_value="sys_script_client_5a1062e347c9b210c361f19f016d43c4">75880ef14711b210c361f19f016d43ce</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 18:01:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

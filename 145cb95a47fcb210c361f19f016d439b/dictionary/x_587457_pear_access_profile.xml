@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="f53dfdda47fcb210c361f19f016d435a" label="Access Profile" max_length="40" name="x_587457_pear_access_profile" type="collection">
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Access profile ID" max_length="40" name="number" type="string"/>
-        <element label="Business part ID" max_length="32" name="business_part_id" reference="x_587457_pear_business_part_of_app_access" type="reference"/>
-        <element label="App ID" max_length="32" name="app_id" reference="x_587457_pear_application" type="reference"/>
-        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Access profile ID" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Application" mandatory="true" max_length="32" name="application" reference="x_587457_pear_application" type="reference"/>
+        <element display="true" label="Label" mandatory="true" max_length="40" name="label" type="string"/>
         <element label="Code" max_length="40" name="code" type="string"/>
         <index name="index">
-            <element name="app_id"/>
-        </index>
-        <index name="index2">
-            <element name="business_part_id"/>
+            <element name="application"/>
         </index>
     </element>
 </database>

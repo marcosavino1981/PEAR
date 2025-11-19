@@ -20,24 +20,24 @@
         <query/>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles/>
+        <roles>admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-30 13:35:48</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a01dd65747f47210c361f19f016d4379</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Access Request Cat Item</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Cat Item - Access Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_app_module_a01dd65747f47210c361f19f016d4379</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-04 15:43:25</sys_updated_on>
+        <sys_updated_on>2025-11-19 22:37:09</sys_updated_on>
         <timeline_page/>
-        <title>Access Request Cat Item</title>
+        <title>Cat Item - Access Request</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

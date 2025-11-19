@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_587457_pear_Applicative Access Preview - Dynamic v2.do</endpoint>
+        <html>&lt;j:jelly xmlns:j="jelly:core" xmlns:g="glide"&gt;&#13;
+  &lt;div id="pear-aa-container"&gt;&#13;
+    &lt;h4&gt;Applicative Access (Dynamic Preview by Business Profile)&lt;/h4&gt;&#13;
+    &lt;button id="pear-aa-refresh" type="button"&gt;Refresh&lt;/button&gt;&#13;
+    &lt;div id="pear-aa-loading" style="display:none;"&gt;Loading...&lt;/div&gt;&#13;
+    &lt;table id="pear-aa-table" class="table table-bordered table-striped table-sm" style="display:none;"&gt;&#13;
+      &lt;thead&gt;&#13;
+        &lt;tr&gt;&#13;
+          &lt;th&gt;App access ID&lt;/th&gt;&#13;
+          &lt;th&gt;App access&lt;/th&gt;&#13;
+          &lt;th&gt;Business Profile ID&lt;/th&gt;&#13;
+          &lt;th&gt;Business Profile&lt;/th&gt;&#13;
+          &lt;th&gt;App ID&lt;/th&gt;&#13;
+          &lt;th&gt;Application&lt;/th&gt;&#13;
+          &lt;th&gt;Business Part ID&lt;/th&gt;&#13;
+          &lt;th&gt;Business Part&lt;/th&gt;&#13;
+          &lt;th&gt;Project Space ID&lt;/th&gt;&#13;
+          &lt;th&gt;Project&lt;/th&gt;&#13;
+          &lt;th&gt;Technical Role ID&lt;/th&gt;&#13;
+          &lt;th&gt;Technical Role&lt;/th&gt;&#13;
+          &lt;th&gt;Access Profile ID&lt;/th&gt;&#13;
+          &lt;th&gt;Access Profile&lt;/th&gt;&#13;
+          &lt;th&gt;License ID&lt;/th&gt;&#13;
+          &lt;th&gt;License&lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+      &lt;/thead&gt;&#13;
+      &lt;tbody id="pear-aa-body"&gt;&lt;/tbody&gt;&#13;
+    &lt;/table&gt;&#13;
+  &lt;/div&gt;&#13;
+&#13;
+  &lt;script&gt;&#13;
+  //&lt;![CDATA[&#13;
+    window.refreshAAPreview = function() {&#13;
+      var loading = document.getElementById('pear-aa-loading');&#13;
+      var table   = document.getElementById('pear-aa-table');&#13;
+      var body    = document.getElementById('pear-aa-body');&#13;
+&#13;
+      var rowsJSON = '[]';&#13;
+      try { rowsJSON = g_form.getValue('pear_mrvs') || '[]'; } catch(e) {}&#13;
+&#13;
+      loading.style.display = 'block';&#13;
+      table.style.display   = 'none';&#13;
+      body.innerHTML = '';&#13;
+&#13;
+      var ga = new GlideAjax('x_587457_pear.PEAR_PreviewAPI'); // se scoped: 'x_587457_pear.PEAR_PreviewAPI'&#13;
+      ga.addParam('sysparm_name','getApplicativeAccessByBp');&#13;
+      ga.addParam('sysparm_rowsJson', rowsJSON);&#13;
+      ga.getXMLAnswer(function(answer){&#13;
+        loading.style.display = 'none';&#13;
+        var data = [];&#13;
+        try { data = JSON.parse(answer || '[]'); } catch(e) {}&#13;
+        data.forEach(function(row){&#13;
+          var tr = document.createElement('tr');&#13;
+          ['number','label','business_profile_id','business_profile','app_id','application','business_part_id','business_part','project_space_id','project','technical_role_id','technical_role','access_profile_id','access_profile','license_id','license'].forEach(function(f){&#13;
+            var td = document.createElement('td');&#13;
+            td.textContent = row[f] || '';&#13;
+            tr.appendChild(td);&#13;
+          });&#13;
+          body.appendChild(tr);&#13;
+        });&#13;
+        table.style.display = 'table';&#13;
+      });&#13;
+    };&#13;
+&#13;
+    // primo render e bottone refresh&#13;
+    addLoadEvent(function(){&#13;
+      if (typeof window.refreshAAPreview === 'function') window.refreshAAPreview();&#13;
+      var btn = document.getElementById('pear-aa-refresh');&#13;
+      if (btn) btn.addEventListener('click', window.refreshAAPreview);&#13;
+    });&#13;
+  //]]&gt;&#13;
+  &lt;/script&gt;&#13;
+&lt;/j:jelly&gt;&#13;
+</html>
+        <name>Applicative Access Preview - Dynamic v2</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-05 00:07:50</sys_created_on>
+        <sys_id>53eddac54789f210c361f19f016d43a6</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Applicative Access Preview - Dynamic v2</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_ui_page_53eddac54789f210c361f19f016d43a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-06 13:02:03</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PEAR">145cb95a47fcb210c361f19f016d439b</application>
+        <file_path/>
+        <instance_id>95cb4f2d93302610611eddd548373c35</instance_id>
+        <instance_name>dev322865</instance_name>
+        <name>sys_ui_page_53eddac54789f210c361f19f016d43a6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page"><sys_ui_page action="INSERT_OR_UPDATE"><category>general</category><client_script/><description/><direct>false</direct><endpoint>x_587457_pear_Applicative Access Preview - Dynamic v2.do</endpoint><html>&lt;j:jelly xmlns:j="jelly:core" xmlns:g="glide"&gt;&#13;
+  &lt;div id="pear-aa-container"&gt;&#13;
+    &lt;h4&gt;Applicative Access (Dynamic Preview by Business Profile)&lt;/h4&gt;&#13;
+    &lt;button id="pear-aa-refresh" type="button"&gt;Refresh&lt;/button&gt;&#13;
+    &lt;div id="pear-aa-loading" style="display:none;"&gt;Loading...&lt;/div&gt;&#13;
+    &lt;table id="pear-aa-table" class="table table-bordered table-striped table-sm" style="display:none;"&gt;&#13;
+      &lt;thead&gt;&#13;
+        &lt;tr&gt;&#13;
+          &lt;th&gt;App access ID&lt;/th&gt;&#13;
+          &lt;th&gt;App access&lt;/th&gt;&#13;
+          &lt;th&gt;Business Profile ID&lt;/th&gt;&#13;
+          &lt;th&gt;Business Profile&lt;/th&gt;&#13;
+          &lt;th&gt;App ID&lt;/th&gt;&#13;
+          &lt;th&gt;Application&lt;/th&gt;&#13;
+          &lt;th&gt;Business Part ID&lt;/th&gt;&#13;
+          &lt;th&gt;Business Part&lt;/th&gt;&#13;
+          &lt;th&gt;Project Space ID&lt;/th&gt;&#13;
+          &lt;th&gt;Project&lt;/th&gt;&#13;
+          &lt;th&gt;Technical Role ID&lt;/th&gt;&#13;
+          &lt;th&gt;Technical Role&lt;/th&gt;&#13;
+          &lt;th&gt;Access Profile ID&lt;/th&gt;&#13;
+          &lt;th&gt;Access Profile&lt;/th&gt;&#13;
+          &lt;th&gt;License ID&lt;/th&gt;&#13;
+          &lt;th&gt;License&lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+      &lt;/thead&gt;&#13;
+      &lt;tbody id="pear-aa-body"&gt;&lt;/tbody&gt;&#13;
+    &lt;/table&gt;&#13;
+  &lt;/div&gt;&#13;
+&#13;
+  &lt;script&gt;&#13;
+  //&lt;![CDATA[&#13;
+    window.refreshAAPreview = function() {&#13;
+      var loading = document.getElementById('pear-aa-loading');&#13;
+      var table   = document.getElementById('pear-aa-table');&#13;
+      var body    = document.getElementById('pear-aa-body');&#13;
+&#13;
+      var rowsJSON = '[]';&#13;
+      try { rowsJSON = g_form.getValue('pear_mrvs') || '[]'; } catch(e) {}&#13;
+&#13;
+      loading.style.display = 'block';&#13;
+      table.style.display   = 'none';&#13;
+      body.innerHTML = '';&#13;
+&#13;
+      var ga = new GlideAjax('x_587457_pear.PEAR_PreviewAPI'); // se scoped: 'x_587457_pear.PEAR_PreviewAPI'&#13;
+      ga.addParam('sysparm_name','getApplicativeAccessByBp');&#13;
+      ga.addParam('sysparm_rowsJson', rowsJSON);&#13;
+      ga.getXMLAnswer(function(answer){&#13;
+        loading.style.display = 'none';&#13;
+        var data = [];&#13;
+        try { data = JSON.parse(answer || '[]'); } catch(e) {}&#13;
+        data.forEach(function(row){&#13;
+          var tr = document.createElement('tr');&#13;
+          ['number','label','business_profile_id','business_profile','app_id','application','business_part_id','business_part','project_space_id','project','technical_role_id','technical_role','access_profile_id','access_profile','license_id','license'].forEach(function(f){&#13;
+            var td = document.createElement('td');&#13;
+            td.textContent = row[f] || '';&#13;
+            tr.appendChild(td);&#13;
+          });&#13;
+          body.appendChild(tr);&#13;
+        });&#13;
+        table.style.display = 'table';&#13;
+      });&#13;
+    };&#13;
+&#13;
+    // primo render e bottone refresh&#13;
+    addLoadEvent(function(){&#13;
+      if (typeof window.refreshAAPreview === 'function') window.refreshAAPreview();&#13;
+      var btn = document.getElementById('pear-aa-refresh');&#13;
+      if (btn) btn.addEventListener('click', window.refreshAAPreview);&#13;
+    });&#13;
+  //]]&gt;&#13;
+  &lt;/script&gt;&#13;
+&lt;/j:jelly&gt;&#13;
+</html><name>Applicative Access Preview - Dynamic v2</name><processing_script/><sys_class_name>sys_ui_page</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-11-05 00:07:50</sys_created_on><sys_id>53eddac54789f210c361f19f016d43a6</sys_id><sys_mod_count>20</sys_mod_count><sys_name>Applicative Access Preview - Dynamic v2</sys_name><sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package><sys_policy/><sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope><sys_update_name>sys_ui_page_53eddac54789f210c361f19f016d43a6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-11-06 13:02:03</sys_updated_on></sys_ui_page></record_update>]]></payload>
+        <payload_hash>41826746</payload_hash>
+        <record_name>Applicative Access Preview - Dynamic v2</record_name>
+        <reverted_from/>
+        <source>dc5cb95a47fcb210c361f19f016d43b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-06 13:02:04</sys_created_on>
+        <sys_id>ceb8d6a147893210c361f19f016d4350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a594288de0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-06 13:02:04</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>42b8d6a1a589321043d6fbec788ce550</update_guid>
+        <update_guid_history>42b8d6a1a589321043d6fbec788ce550:41826746,bca8dae97a493210c5b444b66b1dd66e:-547820664,35f35629404932104562dc1bb5920d64:-1331616955,16bbb151d54d72100e94b73fde560135:624942460,e69b3ddd720d72105ff32284b2ab95e5:-919864708,100b35196b0d721020cd9605d09fb34c:925128425,ef2a7d5dd50d7210e4612c1929ce59d5:-73251148,e1e6bd953e0d7210895efeee1e944739:849902223,a8d63995670d72106c9c734e5e01ea24:-253855312,86b93059960572103ee2cfbb2ebaa882:-1547962039,7249b8193605721058f9a21e1116f342:-1128995020,56a57411f105721042cfa81981974ef1:1599552613,3a95e81df34172102942c45755ef9124:398444465,643528d9e0417210cd02fd59fe135288:-2046489128,87e4ac99534172109fccf2e33b3ff589:398444465,1f03e20db70132104c1774fe7f6f2a97:2003461837,83b26ac987013210b1605ef43410ffa7:301314591,53326ac54c0132104d83dc86a19db58c:-1723661720,9041aec58801321067357588ffa747f2:-1581402365,dd8e9249de89f2105abbf6303806d686:1796167612,13eddac5cd89f210e761c3af68409da8:1352826072</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 18:23:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>04ba3019803d4873804ffe73bf9eb2f1</sys_id>
+        <sys_metadata>53eddac54789f210c361f19f016d43a6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Applicative Access Preview - Dynamic v2</sys_name>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_scope_delete display_value="">3973acb9f833485c9b109d727517f771</sys_scope_delete>
+        <sys_update_name>sys_ui_page_53eddac54789f210c361f19f016d43a6</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_53eddac54789f210c361f19f016d43a6">ceb8d6a147893210c361f19f016d4350</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 18:23:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

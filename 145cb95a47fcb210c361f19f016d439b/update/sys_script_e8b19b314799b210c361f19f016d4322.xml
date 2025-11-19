@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_587457_pear_applicative_access</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>PEAR - AIU-AA</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	gs.addInfoMessage('BR PEAR - AIU-AA triggered by the update of AA ' + current.label);
+	var bpa_aa = [];
+	var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+	bpa.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getConcernedfBusinessPartsOfApplicativeAccess(current.sys_id));
+	bpa.query();
+	while(bpa.next())
+	{
+		var aa = new GlideRecord('x_587457_pear_applicative_access');
+		aa.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getConcernedApplicativeAccessOfBusinessPart(bpa.sys_id));
+		aa.query();
+		while(aa.next())
+			bpa_aa.push(aa.sys_id.toString());
+		
+		bpa.applicative_access = bpa_aa.toString();
+		bpa.update();
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-19 22:09:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e8b19b314799b210c361f19f016d4322</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>PEAR - AIU-AA</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_e8b19b314799b210c361f19f016d4322</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 22:17:07</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=e8b19b314799b210c361f19f016d4322"/>
+</record_update>
