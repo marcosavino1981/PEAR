@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="applicative_access" table="x_587457_pear_business_part_of_app_access">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="license" table="x_587457_pear_business_profile">
         <active>true</active>
         <array>false</array>
         <attributes/>
@@ -7,16 +7,13 @@
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
-	var query = new x_587457_pear.PEAR_Utils3().getConcernedApplicativeAccessOfBusinessPart(current.sys_id);
-	gs.info('MS query ' + query.toString().replace('sys_idIN',''))
-	// return '';  // return the calculated value
-	return query.replace('sys_idIN','').replaceAll(' ','');
+	return '';  // return the calculated value
 
 })(current);]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Applicative access</column_label>
+        <column_label>Licenses</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -29,7 +26,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>applicative_access</element>
+        <element>license</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -38,12 +35,12 @@
         <internal_type display_value="">glide_list</internal_type>
         <mandatory>false</mandatory>
         <max_length>4000</max_length>
-        <name>x_587457_pear_business_part_of_app_access</name>
+        <name>x_587457_pear_business_profile</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
-        <reference display_value="" name="x_587457_pear_applicative_access">x_587457_pear_applicative_access</reference>
+        <reference display_value="" name="x_587457_pear_license">x_587457_pear_license</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -54,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-11-13 21:39:13</sys_created_on>
-        <sys_name>Applicative access</sys_name>
+        <sys_created_on>2025-11-19 11:38:52</sys_created_on>
+        <sys_name>Licenses</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
-        <sys_update_name>sys_dictionary_x_587457_pear_business_part_of_app_access_applicative_access</sys_update_name>
+        <sys_update_name>sys_dictionary_x_587457_pear_business_profile_license</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-18 15:26:55</sys_updated_on>
+        <sys_updated_on>2025-11-19 11:39:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

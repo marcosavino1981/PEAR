@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="9ffef1124730f210c361f19f016d434d" label="Business part of app access" max_length="40" name="x_587457_pear_business_part_of_app_access" type="collection">
         <element label="Business unit" max_length="32" name="business_unit" reference="x_587457_pear_organization" reference_qual="javascript: 'app_id=' + current.app_id" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Applicative access" max_length="4000" name="applicative_access" reference="x_587457_pear_applicative_access" type="glide_list"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;var query = new x_587457_pear.PEAR_Utils3().getConcernedApplicativeAccessOfBusinessPart(current.sys_id);&#13;&#10;&#9;gs.info('MS query ' + query.toString().replace('sys_idIN',''))&#13;&#10;&#9;// return '';  // return the calculated value&#13;&#10;&#9;return query.replace('sys_idIN','').replaceAll(' ','');&#13;&#10;&#13;&#10;})(current);" label="Applicative access" max_length="4000" name="applicative_access" reference="x_587457_pear_applicative_access" type="glide_list"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Enable" sequence="1" value="enable"/>
@@ -15,6 +15,8 @@
         <element label="Project" max_length="32" name="project" reference="x_587457_pear_prj_space" type="reference"/>
         <element label="Business profile ID" max_length="32" name="business_profile_id" reference="x_587457_pear_business_profile" reference_floats="true" type="reference"/>
         <element label="Company" max_length="32" name="company" reference="x_587457_pear_organization" type="reference"/>
+        <element label="Access profile" max_length="32" name="access_profile" reference="x_587457_pear_access_profile" reference_qual="javascript: 'app_id=' + current.app_id" type="reference" use_reference_qualifier="advanced"/>
+        <element label="License" max_length="32" name="license" reference="x_587457_pear_license" reference_qual="javascript: 'app_id=' + current.app_id" type="reference" use_reference_qualifier="advanced"/>
         <element label="App access ID" max_length="32" name="app_access_id" reference="x_587457_pear_applicative_access" type="reference"/>
         <element label="App ID" max_length="32" name="app_id" reference="x_587457_pear_application" type="reference"/>
         <element label="Technical role" max_length="32" name="technical_role" reference="x_587457_pear_technical_role" reference_qual="javascript: &quot;app_id=&quot; + current.app_id" type="reference" use_reference_qualifier="advanced"/>
@@ -22,33 +24,39 @@
         <element label="Description" max_length="100" name="description" type="string"/>
         <element label="Group" max_length="32" name="group" reference="x_587457_pear_organization" type="reference"/>
         <index name="index">
-            <element name="app_access_id"/>
+            <element name="access_profile"/>
         </index>
         <index name="index2">
-            <element name="app_id"/>
+            <element name="app_access_id"/>
         </index>
         <index name="index3">
-            <element name="business_profile_id"/>
+            <element name="app_id"/>
         </index>
         <index name="index4">
-            <element name="business_unit"/>
+            <element name="business_profile_id"/>
         </index>
         <index name="index5">
-            <element name="company"/>
+            <element name="business_unit"/>
         </index>
         <index name="index6">
-            <element name="group"/>
+            <element name="company"/>
         </index>
         <index name="index7">
-            <element name="license_id"/>
+            <element name="group"/>
         </index>
         <index name="index8">
-            <element name="organization"/>
+            <element name="license"/>
         </index>
         <index name="index9">
-            <element name="project"/>
+            <element name="license_id"/>
         </index>
         <index name="index10">
+            <element name="organization"/>
+        </index>
+        <index name="index11">
+            <element name="project"/>
+        </index>
+        <index name="index12">
             <element name="technical_role"/>
         </index>
     </element>

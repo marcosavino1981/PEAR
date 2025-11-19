@@ -12,6 +12,149 @@
         <script><![CDATA[var PEAR_Utils3 = Class.create();
 PEAR_Utils3.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
+getUserTypesOfBusinessProfile: function(bp_sysId) {
+
+	if (!bp_sysId) {
+		bp_sysId = this.getParameter('sysparm_bp_sysId');
+	}
+	gs.info('getUserTypesOfBusinessProfile ' + bp_sysId);
+
+	var bp_user_type = [];
+	var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+	bpa.addQuery('business_profile_id',bp_sysId);
+	bpa.query();
+	while(bpa.next())
+	{
+		bpa_user_type = bpa.user_type_list.toString().split(',')
+		for(i=0;i<bpa_user_type.length;i++)
+			if(!bp_user_type.toString().contains(bpa_user_type[i].toString()))
+				bp_user_type.push(bpa_user_type[i].toString())
+
+	}
+		if(bp_user_type.length ==0)
+			return 'sys_id=XYZ';
+		else
+			return 'sys_idIN' + bp_user_type.toString();
+},
+
+getLicensesOfBusinessProfile: function(bp_sysId) {
+
+		if (!bp_sysId) {
+			bp_sysId = this.getParameter('sysparm_bp_sysId');
+		}
+		gs.info('getLicensesOfBusinessProfile ' + bp_sysId);
+
+		var licenses = [];
+		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		bpa.addEncodedQuery("status=enable")
+		bpa.addQuery('business_profile_id',bp_sysId)
+		bpa.query();
+		while(bpa.next())
+			if(!licenses.toString().contains(bpa.license.toString()))
+				licenses.push(bpa.license.toString())
+
+
+
+		if(licenses.length ==0)
+			return 'sys_id=XYZ';
+		else
+			return 'sys_idIN' + licenses.toString();
+
+},	
+
+getAccessProfilesOfBusinessProfile: function(bp_sysId) {
+
+		if (!bp_sysId) {
+			bp_sysId = this.getParameter('sysparm_bp_sysId');
+		}
+		gs.info('getAccessProfilesOfBusinessProfile ' + bp_sysId);
+
+		var access_profiles = [];
+		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		bpa.addEncodedQuery("status=enable")
+		bpa.addQuery('business_profile_id',bp_sysId)
+		bpa.query();
+		while(bpa.next())
+			if(!access_profiles.toString().contains(bpa.access_profile.toString()))
+				access_profiles.push(bpa.access_profile.toString())
+
+		gs.info('getAccessProfilesOfBusinessProfile access_profiles.length ' + access_profiles.length);
+
+
+		if(access_profiles.length ==0)
+			return 'sys_id=XYZ';
+		else
+			return 'sys_idIN' + access_profiles.toString();
+
+},
+
+getApplicationsOfBusinessProfile: function(bp_sysId) {
+
+		if (!bp_sysId) {
+			bp_sysId = this.getParameter('sysparm_bp_sysId');
+		}
+		gs.info('getApplicationsOfBusinessProfile ' + bp_sysId);
+
+		var applications = [];
+		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		bpa.addEncodedQuery("status=enable")
+		bpa.addQuery('business_profile_id',bp_sysId)
+		bpa.query();
+		while(bpa.next())
+			if(!applications.toString().contains(bpa.app_id.toString()))
+				applications.push(bpa.app_id.toString())
+
+		if(applications.length ==0)
+			return 'sys_id=XYZ';
+		else
+			return 'sys_idIN' + applications.toString();
+
+
+	},
+
+
+getConcernedfBusinessPartsOfApplicativeAccess: function(aa_sysId) {
+
+		var bp_array = [];
+		var AllLabelComponents = ['technical_role','business_unit','organization','project','group','company'];
+		if (!aa_sysId) {
+			aa_sysId = this.getParameter('sysparm_aa_sysId');
+		}
+
+		// gs.info('getConcernedfBusinessPartsOfApplicativeAccess ' + aa_sysId);
+
+		var aa = new GlideRecord('x_587457_pear_applicative_access');
+		if(aa.get(aa_sysId) /*&& bp.status == 'enable'*/)
+		{
+			var bp = new GlideRecord('x_587457_pear_business_part_of_app_access');
+			bp.addQuery('app_id',aa.app_id)
+			bp.query();
+			var concernerdBp;
+			while(bp.next())
+			{
+				concernerdBp = true;
+				if(!gs.nil(bp.technical_role) && bp.technical_role != aa.technical_role)
+					concernerdBp = false;
+				if(!gs.nil(bp.business_unit) && bp.business_unit != aa.business_unit)
+					concernerdBp = false;
+				if(!gs.nil(bp.project) && bp.project != aa.project)
+					concernerdBp = false;
+				// gs.info('getConcernedfBusinessPartsOfApplicativeAccess bp.label ' + bp.label + ' aa.label ' + aa.label + ' concernerdBp ' + concernerdBp);
+
+				if(concernerdBp == true)
+					bp_array.push(bp.sys_id.toString())
+
+			}
+
+			
+
+		}
+		if(bp_array.length ==0)
+			return 'sys_id=XYZ';
+		else
+			return 'sys_idIN' + bp_array.toString();
+},
+
 
 getApplicativeAccessByBp_v3: function(rowsJson) {
 
@@ -286,6 +429,23 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 		}
     },
 
+	getBusinessProfilesByUser: function () {
+		var pmng_user = new GlideRecord('x_587457_pear_pmng_user');
+		pmng_user.get('uid',gs.getUserID());
+		gs.info('getBusinessProfilesByUser START for user ' + gs.getUserID() + ' User Type: ' + pmng_user.user_type);
+		var bp_array = [];
+		var bp = new GlideRecord('x_587457_pear_business_profile');
+		bp.addEncodedQuery("user_typeLIKE" + pmng_user.user_type);
+		bp.query();
+		while(bp.next())
+			bp_array.push(bp.sys_id.toString())
+
+		// gs.info('getBusinessProfilesByUser bp_array ' + bp_array.toString())
+
+		return 'sys_idIN' + bp_array.toString()
+
+	},
+
 
 
 	getConcernedApplicativeAccessOfBusinessPart: function (bp_sysId) {
@@ -355,13 +515,13 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-14 12:17:09</sys_created_on>
         <sys_id>1e2bd3c847d53210c361f19f016d43ce</sys_id>
-        <sys_mod_count>94</sys_mod_count>
+        <sys_mod_count>142</sys_mod_count>
         <sys_name>PEAR_Utils3</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_script_include_1e2bd3c847d53210c361f19f016d43ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-15 15:09:07</sys_updated_on>
+        <sys_updated_on>2025-11-19 12:00:43</sys_updated_on>
     </sys_script_include>
 </record_update>

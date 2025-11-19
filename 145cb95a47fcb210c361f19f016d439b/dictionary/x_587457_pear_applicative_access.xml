@@ -9,11 +9,12 @@
         <element label="Company" max_length="32" name="company" reference="x_587457_pear_organization" type="reference"/>
         <element label="Project" max_length="32" name="project" reference="x_587457_pear_prj_space" type="reference"/>
         <element label="Enable" max_length="40" name="enable" type="boolean"/>
+        <element label="Business part" max_length="4000" name="business_part" read_only="true" reference="x_587457_pear_business_part_of_app_access" type="glide_list"/>
         <element label="Group" max_length="32" name="group" reference="x_587457_pear_organization" type="reference"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;var separator = current.app_id.applicative_access_format.separator;&#13;&#10;&#9;var label = [];&#13;&#10;&#9;if(!gs.nil(current.technical_role))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('technical_role'))&#13;&#10;&#9;if(!gs.nil(current.business_unit))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('business_unit'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.organization))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('organization'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.project))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('project'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.group))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('group'))&#9;&#9;&#13;&#10;&#9;if(!gs.nil(current.company))&#13;&#10;&#9;&#9;label.push(current.getDisplayValue('company'))&#9;&#9;&#13;&#10;&#9;return label.toString().replaceAll(',',separator);  // return the calculated value&#13;&#10;&#13;&#10;})(current);" display="true" label="Label" max_length="40" name="label" type="string" virtual="true"/>
-        <element label="User type" max_length="32" name="user_type" reference="x_587457_pear_user_type" type="reference"/>
-        <element label="Technical role" max_length="32" name="technical_role" reference="x_587457_pear_technical_role" type="reference"/>
+        <element label="Technical role" max_length="32" name="technical_role" reference="x_587457_pear_technical_role" reference_qual="javascript: 'app_id=' + current.app_id" type="reference" use_reference_qualifier="advanced"/>
         <element label="Project space ID" max_length="32" name="project_space_id" reference="x_587457_pear_prj_space" type="reference"/>
+        <element label="User types" max_length="4000" name="user_type" read_only="true" reference="x_587457_pear_user_type" type="glide_list"/>
         <index name="index">
             <element name="app_id"/>
         </index>
@@ -43,9 +44,6 @@
         </index>
         <index name="index10">
             <element name="technical_role"/>
-        </index>
-        <index name="index11">
-            <element name="user_type"/>
         </index>
     </element>
 </database>

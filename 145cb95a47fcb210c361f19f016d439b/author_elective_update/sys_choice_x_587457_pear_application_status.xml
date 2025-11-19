@@ -20,25 +20,6 @@
             <element>status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Created</label>
-            <language>en</language>
-            <name>x_587457_pear_application</name>
-            <sequence>0</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-06 21:33:37</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-06 21:33:37</sys_updated_on>
-            <value>created</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>status</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>GO for Admin</label>
             <language>en</language>
             <name>x_587457_pear_application</name>

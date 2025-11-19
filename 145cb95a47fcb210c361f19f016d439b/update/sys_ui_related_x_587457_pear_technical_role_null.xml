@@ -2,31 +2,45 @@
     <sys_ui_related sys_domain="global" table="x_587457_pear_technical_role" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Technical role - Default view" name="x_587457_pear_technical_role" related_list="NULL" sys_domain="global" view="Default view">ae8f4dee47b07210c361f19f016d43ee</list_id>
+            <list_id display_value="Technical role - Default view" name="x_587457_pear_technical_role" related_list="NULL" sys_domain="global" view="Default view">81c465b547d97210c361f19f016d433c</list_id>
             <order_by/>
             <position>0</position>
-            <related_list>x_587457_pear_applicative_access.technical_role_id</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-28 00:00:33</sys_created_on>
-            <sys_id>aa8f4dee47b07210c361f19f016d43ef</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-28 00:00:33</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Technical role - Default view" name="x_587457_pear_technical_role" related_list="NULL" sys_domain="global" view="Default view">ae8f4dee47b07210c361f19f016d43ee</list_id>
-            <order_by/>
-            <position>1</position>
             <related_list>x_587457_pear_validation_template.technical_role</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-28 00:00:33</sys_created_on>
-            <sys_id>ae8f4dee47b07210c361f19f016d43ef</sys_id>
+            <sys_created_on>2025-11-19 14:09:15</sys_created_on>
+            <sys_id>81c465b547d97210c361f19f016d433d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-28 00:00:33</sys_updated_on>
+            <sys_updated_on>2025-11-19 14:09:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Technical role - Default view" name="x_587457_pear_technical_role" related_list="NULL" sys_domain="global" view="Default view">81c465b547d97210c361f19f016d433c</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_587457_pear_applicative_access.technical_role</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:09:15</sys_created_on>
+            <sys_id>89c465b547d97210c361f19f016d433d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:09:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Technical role - Default view" name="x_587457_pear_technical_role" related_list="NULL" sys_domain="global" view="Default view">81c465b547d97210c361f19f016d433c</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>x_587457_pear_business_part_of_app_access.technical_role</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:09:15</sys_created_on>
+            <sys_id>8dc465b547d97210c361f19f016d433d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:09:15</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Technical role - Default view</calculated_name>
@@ -37,10 +51,10 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-28 00:00:33</sys_created_on>
+            <sys_created_on>2025-11-19 14:09:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ae8f4dee47b07210c361f19f016d43ee</sys_id>
+            <sys_id>81c465b547d97210c361f19f016d433c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Technical role - Default view</sys_name>
             <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -48,7 +62,7 @@
             <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
             <sys_update_name>sys_ui_related_x_587457_pear_technical_role_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-28 00:00:33</sys_updated_on>
+            <sys_updated_on>2025-11-19 14:09:15</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

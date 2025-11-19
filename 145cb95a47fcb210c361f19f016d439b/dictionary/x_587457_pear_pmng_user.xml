@@ -31,6 +31,7 @@
         <element label="History company" max_length="32" name="history_company" reference="core_company" type="reference"/>
         <element label="Stellantis directory" max_length="40" name="stellantis_directory" type="string"/>
         <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <element label="User type" max_length="32" name="user_type" reference="x_587457_pear_user_type" type="reference"/>
         <index name="index">
             <element name="company"/>
         </index>
@@ -45,6 +46,9 @@
         </index>
         <index name="index5">
             <element name="manager_uid"/>
+        </index>
+        <index name="index6">
+            <element name="user_type"/>
         </index>
     </element>
 </database>

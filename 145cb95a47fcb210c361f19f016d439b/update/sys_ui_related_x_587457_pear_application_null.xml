@@ -2,101 +2,87 @@
     <sys_ui_related sys_domain="global" table="x_587457_pear_application" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
+            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">c8b6a9b947d97210c361f19f016d435b</list_id>
             <order_by/>
             <position>0</position>
-            <related_list>x_587457_pear_access_profile.app_id</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>ed2f3e1a47b4f210c361f19f016d4322</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
-            <order_by/>
-            <position>1</position>
-            <related_list>x_587457_pear_app_access_format.app_id</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>692f3e1a47b4f210c361f19f016d4323</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
-            <order_by/>
-            <position>2</position>
-            <related_list>x_587457_pear_applicative_access.app_id</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>6d2f3e1a47b4f210c361f19f016d4323</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
-            <order_by/>
-            <position>3</position>
-            <related_list>x_587457_pear_business_part_of_app_access.app_id</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>612f3e1a47b4f210c361f19f016d4324</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
-            <order_by/>
-            <position>4</position>
-            <related_list>x_587457_pear_license.app_id</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>652f3e1a47b4f210c361f19f016d4324</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
-            <order_by/>
-            <position>5</position>
-            <related_list>x_587457_pear_organization.applications</related_list>
-            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>692f3e1a47b4f210c361f19f016d4324</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
-        </sys_ui_related_list_entry>
-        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
-            <filter/>
-            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">512f3e1a47b4f210c361f19f016d4321</list_id>
-            <order_by/>
-            <position>6</position>
             <related_list>x_587457_pear_technical_role.app_id</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
-            <sys_id>6d2f3e1a47b4f210c361f19f016d4324</sys_id>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
+            <sys_id>84b6a9b947d97210c361f19f016d435c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">c8b6a9b947d97210c361f19f016d435b</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_587457_pear_license.app_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
+            <sys_id>88b6a9b947d97210c361f19f016d435c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">c8b6a9b947d97210c361f19f016d435b</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>x_587457_pear_business_profile.application</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
+            <sys_id>8cb6a9b947d97210c361f19f016d435c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">c8b6a9b947d97210c361f19f016d435b</list_id>
+            <order_by/>
+            <position>3</position>
+            <related_list>x_587457_pear_applicative_access.app_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
+            <sys_id>80b6a9b947d97210c361f19f016d435d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">c8b6a9b947d97210c361f19f016d435b</list_id>
+            <order_by/>
+            <position>4</position>
+            <related_list>x_587457_pear_business_part_of_app_access.app_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
+            <sys_id>84b6a9b947d97210c361f19f016d435d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Application - Default view" name="x_587457_pear_application" related_list="NULL" sys_domain="global" view="Default view">c8b6a9b947d97210c361f19f016d435b</list_id>
+            <order_by/>
+            <position>5</position>
+            <related_list>x_587457_pear_access_profile.app_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
+            <sys_id>88b6a9b947d97210c361f19f016d435d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Application - Default view</calculated_name>
@@ -107,10 +93,10 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 13:29:41</sys_created_on>
+            <sys_created_on>2025-11-19 14:17:39</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>512f3e1a47b4f210c361f19f016d4321</sys_id>
+            <sys_id>c8b6a9b947d97210c361f19f016d435b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Application - Default view</sys_name>
             <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -118,7 +104,7 @@
             <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
             <sys_update_name>sys_ui_related_x_587457_pear_application_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 13:29:41</sys_updated_on>
+            <sys_updated_on>2025-11-19 14:17:39</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

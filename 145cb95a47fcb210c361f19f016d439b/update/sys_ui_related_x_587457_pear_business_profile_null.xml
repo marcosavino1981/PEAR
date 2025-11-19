@@ -2,73 +2,73 @@
     <sys_ui_related sys_domain="global" table="x_587457_pear_business_profile" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">baee05ae47b07210c361f19f016d4389</list_id>
+            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">89184db947d57210c361f19f016d4378</list_id>
             <order_by/>
             <position>0</position>
-            <related_list>x_587457_pear_assigned_business_profile.business_profile_id</related_list>
+            <related_list>REL:347fe4b147157210c361f19f016d43d9</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 23:57:51</sys_created_on>
-            <sys_id>b6ee05ae47b07210c361f19f016d438a</sys_id>
+            <sys_created_on>2025-11-19 12:03:54</sys_created_on>
+            <sys_id>45184db947d57210c361f19f016d4379</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 23:57:51</sys_updated_on>
+            <sys_updated_on>2025-11-19 12:03:54</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">baee05ae47b07210c361f19f016d4389</list_id>
+            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">89184db947d57210c361f19f016d4378</list_id>
             <order_by/>
             <position>1</position>
             <related_list>x_587457_pear_business_part_of_app_access.business_profile_id</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 23:57:51</sys_created_on>
-            <sys_id>baee05ae47b07210c361f19f016d438a</sys_id>
+            <sys_created_on>2025-11-19 12:03:54</sys_created_on>
+            <sys_id>49184db947d57210c361f19f016d4379</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 23:57:51</sys_updated_on>
+            <sys_updated_on>2025-11-19 12:03:54</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">baee05ae47b07210c361f19f016d4389</list_id>
+            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">89184db947d57210c361f19f016d4378</list_id>
             <order_by/>
             <position>2</position>
-            <related_list>x_587457_pear_required_training.business_profile_id</related_list>
+            <related_list>REL:8be5497547d57210c361f19f016d435c</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 23:57:51</sys_created_on>
-            <sys_id>beee05ae47b07210c361f19f016d438a</sys_id>
+            <sys_created_on>2025-11-19 12:03:54</sys_created_on>
+            <sys_id>4d184db947d57210c361f19f016d4379</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 23:57:51</sys_updated_on>
+            <sys_updated_on>2025-11-19 12:03:54</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">baee05ae47b07210c361f19f016d4389</list_id>
+            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">89184db947d57210c361f19f016d4378</list_id>
             <order_by/>
             <position>3</position>
-            <related_list>x_587457_pear_validation_template.business_profile</related_list>
+            <related_list>REL:f04389fd47957210c361f19f016d4361</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 23:57:51</sys_created_on>
-            <sys_id>b2ee05ae47b07210c361f19f016d438b</sys_id>
+            <sys_created_on>2025-11-19 12:03:54</sys_created_on>
+            <sys_id>41184db947d57210c361f19f016d437a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 23:57:51</sys_updated_on>
+            <sys_updated_on>2025-11-19 12:03:54</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">baee05ae47b07210c361f19f016d4389</list_id>
+            <list_id display_value="Business profile - Default view" name="x_587457_pear_business_profile" related_list="NULL" sys_domain="global" view="Default view">89184db947d57210c361f19f016d4378</list_id>
             <order_by/>
             <position>4</position>
-            <related_list>x_587457_pear_validator.concerned_business_profile</related_list>
+            <related_list>REL:4a4e703547957210c361f19f016d439e</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 23:57:51</sys_created_on>
-            <sys_id>b6ee05ae47b07210c361f19f016d438b</sys_id>
+            <sys_created_on>2025-11-19 12:03:54</sys_created_on>
+            <sys_id>45184db947d57210c361f19f016d437a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 23:57:51</sys_updated_on>
+            <sys_updated_on>2025-11-19 12:03:54</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Business profile - Default view</calculated_name>
@@ -79,10 +79,10 @@
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-27 23:57:51</sys_created_on>
+            <sys_created_on>2025-11-19 12:03:54</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>baee05ae47b07210c361f19f016d4389</sys_id>
+            <sys_id>89184db947d57210c361f19f016d4378</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Business profile - Default view</sys_name>
             <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -90,7 +90,7 @@
             <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
             <sys_update_name>sys_ui_related_x_587457_pear_business_profile_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-27 23:57:51</sys_updated_on>
+            <sys_updated_on>2025-11-19 12:03:54</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

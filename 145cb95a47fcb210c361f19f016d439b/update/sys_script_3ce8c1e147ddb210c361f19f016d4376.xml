@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_587457_pear_business_part_of_app_access</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>PEAR - AIU-BPa</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Automatic update of the User Type on the corresponding applicative access - START
+	gs.addInfoMessage('BR PEAR - AIU-BPa triggered by the update of Bpa ' + current.label);
+	var aa_user_type = [];
+	var bpa_user_type;
+	var bpa_aa = [];
+	var bpa;
+	var aa = new GlideRecord('x_587457_pear_applicative_access');
+	aa.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getConcernedApplicativeAccessOfBusinessPart(current.sys_id));
+	aa.query();
+	while(aa.next())
+	{
+		// gs.addInfoMessage("aa " + aa.label)
+		bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		bpa.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getConcernedfBusinessPartsOfApplicativeAccess(aa.sys_id));
+		bpa.query();
+		while(bpa.next())
+		{
+			bpa_aa.push(bpa.sys_id.toString());
+			// gs.addInfoMessage("aa " + aa.label + ' bpa ' + bpa.label + ' bpa user types ' + bpa.user_type_list);
+			bpa_user_type = bpa.user_type_list.toString().split(',')
+			for(i=0;i<bpa_user_type.length;i++)
+				if(!aa_user_type.toString().contains(bpa_user_type[i].toString()))
+					aa_user_type.push(bpa_user_type[i].toString())
+			
+
+		}
+		// gs.addInfoMessage("aa " + aa.label + ' aa_user_type ' + aa_user_type.toString());
+		aa.user_type = aa_user_type.toString();
+		aa.business_part = bpa_aa.toString();
+		aa.update();
+
+	}
+	// Automatic update of the User Type on the corresponding applicative access - END
+
+	// Automatic update of the User Type, Application, Access profile and License lists on the corresponding business profiles - START
+	var bp_user_type = [];
+	var bp = new GlideRecord('x_587457_pear_business_profile');
+	bp.get(current.business_profile_id);
+	// gs.addInfoMessage('Updating business profile ' + bp.label)
+	bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+	bpa.addQuery('business_profile_id',bp.sys_id);
+	bpa.query();
+	// gs.addInfoMessage('bpa count ' + bpa.getRowCount())
+	while(bpa.next())
+	{
+		bpa_user_type = bpa.user_type_list.toString().split(',')
+		for(i=0;i<bpa_user_type.length;i++)
+			if(!bp_user_type.toString().contains(bpa_user_type[i].toString()))
+				bp_user_type.push(bpa_user_type[i].toString())
+
+	}
+	bp.user_type = bp_user_type.toString();
+
+	var applications = [];
+	var app = new GlideRecord('x_587457_pear_application');
+	app.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getApplicationsOfBusinessProfile(bp.sys_id));
+	app.query();
+	while(app.next())
+		applications.push(app.sys_id.toString());
+	bp.application = applications.toString();
+
+	var access_profiles = [];
+	var ap = new GlideRecord('x_587457_pear_access_profile');
+	ap.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getAccessProfilesOfBusinessProfile(bp.sys_id));
+	ap.query();
+	while(ap.next())
+		access_profiles.push(ap.sys_id.toString())
+	bp.access_profile = access_profiles.toString();
+
+	var licenses = [];
+	var l = new GlideRecord('x_587457_pear_license');
+	l.addEncodedQuery(new x_587457_pear.PEAR_Utils3().getLicensesOfBusinessProfile(bp.sys_id));
+	l.query();
+	while(l.next())
+		licenses.push(l.sys_id.toString());
+	bp.license = licenses.toString(); 
+
+
+	bp.update();
+	// Automatic update of the User Type, Application, Access profile and License lists on the corresponding business profiles - END
+
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-18 17:30:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3ce8c1e147ddb210c361f19f016d4376</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>PEAR - AIU-BPa</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
+        <sys_update_name>sys_script_3ce8c1e147ddb210c361f19f016d4376</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-19 14:05:38</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=3ce8c1e147ddb210c361f19f016d4376"/>
+</record_update>
