@@ -5,7 +5,7 @@
         <basic_apply_to>x_587457_pear_business_profile</basic_apply_to>
         <basic_query_from>x_587457_pear_user_type</basic_query_from>
         <insert_callback/>
-        <name>User types</name>
+        <name>_User types</name>
         <query_from/>
         <query_with><![CDATA[(function refineQuery(current, parent) {
 
@@ -21,14 +21,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-19 11:54:29</sys_created_on>
         <sys_id>8be5497547d57210c361f19f016d435c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>User types</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>_User types</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_relationship_8be5497547d57210c361f19f016d435c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-19 12:10:21</sys_updated_on>
+        <sys_updated_on>2025-11-21 07:49:55</sys_updated_on>
     </sys_relationship>
     <sys_translated_text action="delete_multiple" query="documentkey=8be5497547d57210c361f19f016d435c"/>
 </record_update>

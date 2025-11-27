@@ -13,83 +13,101 @@
 PEAR_Utils3.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
 
-getUserTypesOfBusinessProfile: function(bp_sysId) {
-
-	if (!bp_sysId) {
-		bp_sysId = this.getParameter('sysparm_bp_sysId');
-	}
-	gs.info('getUserTypesOfBusinessProfile ' + bp_sysId);
-
-	var bp_user_type = [];
-	var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
-	bpa.addQuery('business_profile_id',bp_sysId);
-	bpa.query();
-	while(bpa.next())
-	{
-		bpa_user_type = bpa.user_type_list.toString().split(',')
-		for(i=0;i<bpa_user_type.length;i++)
-			if(!bp_user_type.toString().contains(bpa_user_type[i].toString()))
-				bp_user_type.push(bpa_user_type[i].toString())
-
-	}
-		if(bp_user_type.length ==0)
-			return 'sys_id=XYZ';
-		else
-			return 'sys_idIN' + bp_user_type.toString();
-},
-
-getLicensesOfBusinessProfile: function(bp_sysId) {
+	getUserTypesOfBusinessProfile: function(bp_sysId) {
 
 		if (!bp_sysId) {
 			bp_sysId = this.getParameter('sysparm_bp_sysId');
 		}
-		gs.info('getLicensesOfBusinessProfile ' + bp_sysId);
+		gs.info('getUserTypesOfBusinessProfile ' + bp_sysId);
+
+		var bp_user_type = [];
+		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
+		bpa.addQuery('business_profile_id',bp_sysId);
+		bpa.query();
+		while(bpa.next())
+		{
+			bpa_user_type = bpa.user_type_list.toString().split(',')
+			for(i=0;i<bpa_user_type.length;i++)
+				if(!bp_user_type.toString().contains(bpa_user_type[i].toString()))
+					bp_user_type.push(bpa_user_type[i].toString())
+
+		}
+		
+			if(bp_user_type.length ==0)
+				return 'sys_id=XYZ';
+			else
+				return 'sys_idIN' + bp_user_type.toString();
+	},
+
+	getLicensesOfBusinessProfile: function(bp_sysId,requestedFor) {
+
+		if (!bp_sysId) {
+			bp_sysId = this.getParameter('sysparm_bp_sysId');
+		}
+		if (!requestedFor) {
+			requestedFor = this.getParameter('sysparm_requestedFor');
+		}
+
+		var pmng_user = new GlideRecord('x_587457_pear_pmng_user');
+		if(gs.nil(requestedFor))
+			pmng_user.get('uid',gs.getUserID());
+		else
+			pmng_user.get('uid',requestedFor);
+
+		// gs.info('getLicensesOfBusinessProfile ' + bp_sysId + ' requestedFor pmng_user ' + pmng_user.sys_id);
+
 
 		var licenses = [];
 		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
 		bpa.addEncodedQuery("status=enable")
-		bpa.addQuery('business_profile_id',bp_sysId)
+		bpa.addQuery('business_profile_id',bp_sysId);
+		bpa.addEncodedQuery("user_type_listLIKE" + pmng_user.user_type);	// MS	-> maybe condition to if(!gs.nil(requestedFor))
 		bpa.query();
 		while(bpa.next())
 			if(!licenses.toString().contains(bpa.license.toString()))
 				licenses.push(bpa.license.toString())
 
-
-
 		if(licenses.length ==0)
 			return 'sys_id=XYZ';
 		else
 			return 'sys_idIN' + licenses.toString();
+	},	
 
-},	
-
-getAccessProfilesOfBusinessProfile: function(bp_sysId) {
+	getAccessProfilesOfBusinessProfile: function(bp_sysId,requestedFor) {
 
 		if (!bp_sysId) {
 			bp_sysId = this.getParameter('sysparm_bp_sysId');
 		}
-		gs.info('getAccessProfilesOfBusinessProfile ' + bp_sysId);
+		if (!requestedFor) {
+			requestedFor = this.getParameter('sysparm_requestedFor');
+		}
+
+		var pmng_user = new GlideRecord('x_587457_pear_pmng_user');
+		if(gs.nil(requestedFor))
+			pmng_user.get('uid',gs.getUserID());
+		else
+			pmng_user.get('uid',requestedFor);
+
+		gs.info('getAccessProfilesOfBusinessProfile ' + bp_sysId + ' requestedFor pmng_user ' + pmng_user.sys_id);
+
 
 		var access_profiles = [];
 		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
 		bpa.addEncodedQuery("status=enable")
-		bpa.addQuery('business_profile_id',bp_sysId)
+		bpa.addQuery('business_profile_id',bp_sysId);
+		bpa.addEncodedQuery("user_type_listLIKE" + pmng_user.user_type);	// MS	-> maybe condition to if(!gs.nil(requestedFor))
 		bpa.query();
 		while(bpa.next())
 			if(!access_profiles.toString().contains(bpa.access_profile.toString()))
 				access_profiles.push(bpa.access_profile.toString())
 
-		gs.info('getAccessProfilesOfBusinessProfile access_profiles.length ' + access_profiles.length);
-
-
 		if(access_profiles.length ==0)
 			return 'sys_id=XYZ';
 		else
 			return 'sys_idIN' + access_profiles.toString();
+	},
 
-},
-
-getApplicationsOfBusinessProfile: function(bp_sysId) {
+	getApplicationsOfBusinessProfile: function(bp_sysId) {
 
 		if (!bp_sysId) {
 			bp_sysId = this.getParameter('sysparm_bp_sysId');
@@ -109,12 +127,10 @@ getApplicationsOfBusinessProfile: function(bp_sysId) {
 			return 'sys_id=XYZ';
 		else
 			return 'sys_idIN' + applications.toString();
-
-
 	},
 
 
-getConcernedfBusinessPartsOfApplicativeAccess: function(aa_sysId) {
+	getConcernedfBusinessPartsOfApplicativeAccess: function(aa_sysId) {
 
 		var bp_array = [];
 		var AllLabelComponents = ['technical_role','business_unit','organization','project','group','company'];
@@ -144,262 +160,184 @@ getConcernedfBusinessPartsOfApplicativeAccess: function(aa_sysId) {
 
 				if(concernerdBp == true)
 					bp_array.push(bp.sys_id.toString())
-
 			}
-
-			
-
 		}
 		if(bp_array.length ==0)
 			return 'sys_id=XYZ';
 		else
 			return 'sys_idIN' + bp_array.toString();
-},
+	},
 
+	getLicenseByBp: function(rowsJson,requestedFor) {
 
-getApplicativeAccessByBp_v3: function(rowsJson) {
+		if (!rowsJson) {
+			rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
+		}
+		if (!requestedFor) {
+			requestedFor = this.getParameter('sysparm_requestedFor') || '[]';
+		}		
+		gs.info('getLicenseByBp rowsJson ' + rowsJson + ' requestedFor ' + requestedFor);
 
-    if (!rowsJson) {
-        rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
-    }
+		var rows = [];
+		try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
 
-    // gs.info('getApplicativeAccessByBp rowsJson3 ' + rowsJson);
+		var outMap = {};
 
-    var rows = [];
-    try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
+		for(z=0;z<rows.length;z++)
+		{
+			var bpIds = rows[z].business_profile.toString().split(',');
+			var prjIds = rows[z].projects.toString().split(',');
+			if (!bpIds.length)
+				return '[]';
+			if (!prjIds.length)
+				return '[]';
 
-    // gs.info('getApplicativeAccessByBp rows length ' + rows.length);
-	var outMap = {};
-
-	for(z=0;z<rows.length;z++)
-	{
-		var bpIds = rows[z].business_profile.toString().split(',');
-		var prjIds = rows[z].projects.toString().split(',');
-
-		if (!bpIds.length)
-			return '[]';
-
-		if (!prjIds.length)
-			return '[]';
-
-		// --- 3. Query tabella BusinessPart<->ApplicativeAccess ---
-		var parts = new GlideRecord('x_587457_pear_business_part_of_app_access');
-		parts.addQuery('business_profile_id', 'IN', bpIds.join(','));
-		parts.query();
-		gs.info('getApplicativeAccessByBp parts count ' + parts.getRowCount())
-
-		// --- 4. Uso una mappa per evitare duplicati ---
-		
-
-		// --- 5. Ciclo sulle parti ---
-		while (parts.next()) {
-
-
-			// Prendo gli applicative access collegati
-			var aa = new GlideRecord('x_587457_pear_applicative_access');
-			gs.info('getApplicativeAccessByBp getConcernedApplicativeAccessOfBusinessPart query per parts ' + parts.sys_id + ' è ' + this.getConcernedApplicativeAccessOfBusinessPart(parts.sys_id))
-
-			// Aggiungo la condizione complessa del business part
-			aa.addEncodedQuery(this.getConcernedApplicativeAccessOfBusinessPart(parts.sys_id));
-
-			// Filtra i progetti passati in input
-			aa.addQuery('project', 'IN', prjIds.join(','));
-
-			aa.query();
-			gs.info('getApplicativeAccessByBp aa query per parts ' +parts.sys_id + ' è '  + aa.getEncodedQuery())
-
-			// --- 6. Ciclo sugli applicative access ---
-			while (aa.next()) {
-
-				var id = aa.getUniqueValue();
-
-				// Mappa per evitare duplicati
+			var l = new GlideRecord('x_587457_pear_license');
+			gs.info('getLicenseByBp this.getLicensesOfBusinessProfile(bpIds,requestedFor) ' + this.getLicensesOfBusinessProfile(bpIds,requestedFor))
+			l.addEncodedQuery(this.getLicensesOfBusinessProfile(bpIds,requestedFor));
+			l.orderBy('label');
+			l.query();
+			while(l.next())
+			{
+				var id = l.getUniqueValue();
 				outMap[id] = {
-					business_part: parts.getValue('label'),
-					number: aa.getDisplayValue('number'),
-					label: aa.getDisplayValue('label'),
-					application: aa.getDisplayValue('application'),
-					app_access_format: aa.application.applicative_access_format.format.toString(),
-					technical_role: aa.getDisplayValue('technical_role'),
-					business_unit: aa.getDisplayValue('business_unit'),
-					organization: aa.getDisplayValue('organization'),
-					project: aa.getDisplayValue('project'),
-					group: aa.getDisplayValue('group'),
-					company: aa.getDisplayValue('company')
-				};
+					number: l.getDisplayValue('number'),
+					label: l.getDisplayValue('label'),
+					application: l.getDisplayValue('application'),
+					max_number: l.getDisplayValue('applicmax_numberation')
+				};			
 			}
 		}
-	}
-    // --- 7. Converto la mappa in array finale ---
-    var out = Object.keys(outMap).map(function(k){ return outMap[k]; });
-
-    gs.info('getApplicativeAccessByBp OUTPUT json ' + new global.JSON().encode(out));
-
-    return new global.JSON().encode(out);
-},
+		var out = Object.keys(outMap).map(function(k){ return outMap[k]; });
+		// gs.info('getLicenseByBp OUTPUT json ' + new global.JSON().encode(out));
+		return new global.JSON().encode(out);
+	},
 
 
-getApplicativeAccessByBp_v2: function(rowsJson) {
+	getAccessProfileByBp: function(rowsJson,requestedFor) {
+		if (!rowsJson) {
+			rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
+		}
+		if (!requestedFor) {
+			requestedFor = this.getParameter('sysparm_requestedFor') || '[]';
+		}
+		gs.info('getAccessProfileByBp rowsJson ' + rowsJson + ' requestedFor ' + requestedFor);
+		
+		var rows = [];
+		try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
 
-    // --- 1. Recupero input JSON ---
-    if (!rowsJson) {
-        rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
-    }
+		var outMap = {};
 
-    gs.info('getApplicativeAccessByBp rowsJson2 ' + rowsJson);
+		for(z=0;z<rows.length;z++)
+		{
+			var bpIds = rows[z].business_profile.toString().split(',');
+			var prjIds = rows[z].projects.toString().split(',');
+			if (!bpIds.length)
+				return '[]';
+			if (!prjIds.length)
+				return '[]';
 
-    var rows = [];
-    try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
+			var ap = new GlideRecord('x_587457_pear_access_profile');
+			ap.addEncodedQuery(this.getAccessProfilesOfBusinessProfile(bpIds,requestedFor));
+			ap.orderBy('label')
+			ap.query();
+			while(ap.next())
+			{
+				var id = ap.getUniqueValue();
+				outMap[id] = {
+					number: ap.getDisplayValue('number'),
+					label: ap.getDisplayValue('label'),
+					code: ap.getDisplayValue('code'),
+					application: ap.getDisplayValue('application'),
+					};			
+			}
+		}
+		var out = Object.keys(outMap).map(function(k){ return outMap[k]; });
+		// gs.info('getAccessProfileByBp OUTPUT json ' + new global.JSON().encode(out));
+		return new global.JSON().encode(out);
+	},
 
-    // --- 2. Raccolta BP e progetti senza duplicati ---
-    var bpSet = {};
-    var prjSet = {};
-
-    rows.forEach(function(r){
-        if (r.business_profile)
-            bpSet[r.business_profile.trim()] = true;
-
-        if (r.projects)
-            prjSet[r.projects.trim()] = true;
-    });
-
-    var bpIds = Object.keys(bpSet).filter(function(id){ return id; });
-    var prjIds = Object.keys(prjSet).filter(function(id){ return id; });
-
-    gs.info('bpIds: ' + bpIds.join(','));
-    gs.info('prjIds: ' + prjIds.join(','));
-
-    if (!bpIds.length)
-        return '[]';
-
-    if (!prjIds.length)
-        return '[]';
-
-    // --- 3. Query tabella BusinessPart<->ApplicativeAccess ---
-    var parts = new GlideRecord('x_587457_pear_business_part_of_app_access');
-    parts.addQuery('business_profile_id', 'IN', bpIds.join(','));
-    parts.query();
-
-    // --- 4. Uso una mappa per evitare duplicati ---
-    var outMap = {};
-
-    // --- 5. Ciclo sulle parti ---
-    while (parts.next()) {
-
-        gs.info('BP-Part label: ' + parts.label);
-
-        // Prendo gli applicative access collegati
-        var aa = new GlideRecord('x_587457_pear_applicative_access');
-
-        // Aggiungo la condizione complessa del business part
-        aa.addQuery(this.getConcernedApplicativeAccessOfBusinessPart(parts.sys_id));
-
-        // Filtra i progetti passati in input
-        aa.addQuery('project', 'IN', prjIds.join(','));
-
-        aa.query();
-
-        // --- 6. Ciclo sugli applicative access ---
-        while (aa.next()) {
-
-            var id = aa.getUniqueValue();
-
-            // Mappa per evitare duplicati
-            outMap[id] = {
-				business_part: parts.getValue('label'),
-                number: aa.getDisplayValue('number'),
-                label: aa.getDisplayValue('label'),
-                application: aa.getDisplayValue('application'),
-                app_access_format: aa.application.applicative_access_format.format.toString(),
-                technical_role: aa.getDisplayValue('technical_role'),
-                business_unit: aa.getDisplayValue('business_unit'),
-                organization: aa.getDisplayValue('organization'),
-                project: aa.getDisplayValue('project'),
-                group: aa.getDisplayValue('group'),
-                company: aa.getDisplayValue('company')
-            };
-        }
-    }
-
-    // --- 7. Converto la mappa in array finale ---
-    var out = Object.keys(outMap).map(function(k){ return outMap[k]; });
-
-    gs.info('getApplicativeAccessByBp OUTPUT json ' + new global.JSON().encode(out));
-
-    return new global.JSON().encode(out);
-},
+	getApplicativeAccessByBp: function(rowsJson,requestedFor) {
 
 
 
-	getApplicativeAccessByBp: function(rowsJson) {
+		if (!rowsJson) {
+			rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
+		}
 
-	if (!rowsJson) {
-    	var rowsJson = this.getParameter('sysparm_rowsJson') || '[]';
-	}
-
-	gs.info('getApplicativeAccessByBp rowsJson2 ' + rowsJson);
-
-    var rows = [];
-    try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
-
-    var bpSet = {}; 
-    var prjSet = {}; 
-    rows.forEach(function(r){
-      if (r.business_profile) bpSet[r.business_profile] = 1;
-      if (r.projects) prjSet[r.projects] = 1;
-    });
-
-    var bpIds = Object.keys(bpSet).toString().split(',');
-    var prjIds = Object.keys(prjSet).toString().split(',');
-	gs.info('prjIds ' + prjIds)
-	gs.info('prjIds.toString() ' + prjIds.toString())
-
-    if (!bpIds.length)
-      return '[]';
-    var parts = new GlideRecord('x_587457_pear_business_part_of_app_access'); // BP↔App
-    parts.addQuery('business_profile_id', 'IN', bpIds.join(','));
-    parts.query();
-
-	var outMap = {};
-    var out = [];
-    while (parts.next()) {
-		gs.info('getApplicativeAccessByBp parts label ' + parts.label)
-
-      var aa = new GlideRecord('x_587457_pear_applicative_access');
-      aa.addQuery(this.getConcernedApplicativeAccessOfBusinessPart(parts.sys_id));
-      aa.addQuery('project', 'IN', prjIds.join(','));
-      aa.query();
-      while (aa.next()) {
-
-		var format = aa.application.applicative_access_format.format.toString();
-		// out.push({
-		outMap[aa.getUniqueValue()] = {
-			number: aa.getDisplayValue('number'),
-			label: aa.getValue('label'),
-			application: aa.getDisplayValue('application'),
-			app_access_format: format,
-			technical_role: aa.getDisplayValue('technical_role'),
-			business_unit : aa.getDisplayValue('business_unit'),
-			organization : aa.getDisplayValue('organization'),
-			project : aa.getDisplayValue('project'),
-			group : aa.getDisplayValue('group'),
-			company : aa.getDisplayValue('company')
-        };
-      }
-    }
-
-	gs.info('getApplicativeAccessByBp PEAR_Preview json ' + new global.JSON().encode(out))
-    return new global.JSON().encode(out);
-  },
+		if (!requestedFor) {
+			requestedFor = this.getParameter('sysparm_requestedFor') || '';
+		}
 
 
+
+		var pmng_user = new GlideRecord('x_587457_pear_pmng_user');
+		if(gs.nil(requestedFor))
+			pmng_user.get('uid',gs.getUserID());
+		else
+			pmng_user.get('uid',requestedFor);
+
+		// gs.info('getApplicativeAccessByBp rowsJson ' + rowsJson + ' requestedFor pmng_user ' + pmng_user.sys_id);
+		
+		var rows = [];
+		try { rows = JSON.parse(rowsJson); } catch (e) { rows = []; }
+		
+		var outMap = {};
+
+		for(z=0;z<rows.length;z++)
+		{
+			var bpIds = rows[z].business_profile.toString().split(',');
+			var prjIds = rows[z].projects.toString().split(',');
+
+			if (!bpIds.length)
+				return '[]';
+
+			if (!prjIds.length)
+				return '[]';
+
+			var parts = new GlideRecord('x_587457_pear_business_part_of_app_access');
+			parts.addQuery('business_profile_id', 'IN', bpIds.join(','));
+			parts.addEncodedQuery("user_type_listLIKE" + pmng_user.user_type);	// MS	-> maybe condition to if(!gs.nil(requestedFor))
+			parts.query();
+			gs.info('getApplicativeAccessByBp parts count ' + parts.getRowCount());
+			gs.info('getApplicativeAccessByBp parts query ' + parts.getEncodedQuery());
+			while (parts.next()) {
+				var aa = new GlideRecord('x_587457_pear_applicative_access');
+				aa.addEncodedQuery(this.getConcernedApplicativeAccessOfBusinessPart(parts.sys_id,requestedFor));
+				if(parts.application.applicative_access_format.format.contains("project"))
+					aa.addQuery('project', 'IN', prjIds.join(','));
+				aa.query();
+				// gs.info('getApplicativeAccessByBp aa check project ' + parts.application.applicative_access_format.format);
+				gs.info('getApplicativeAccessByBp aa count ' + aa.getRowCount());
+				gs.info('getApplicativeAccessByBp aa query ' + aa.getEncodedQuery());
+				while (aa.next()) {
+					var id = aa.getUniqueValue();
+					outMap[id] = {
+						business_part: parts.getValue('label'),
+						number: aa.getDisplayValue('number'),
+						label: aa.getDisplayValue('label'),
+						application: aa.getDisplayValue('application'),
+						app_access_format: aa.application.applicative_access_format.format.toString(),
+						technical_role: aa.getDisplayValue('technical_role'),
+						business_unit: aa.getDisplayValue('business_unit'),
+						organization: aa.getDisplayValue('organization'),
+						project: aa.getDisplayValue('project'),
+						group: aa.getDisplayValue('group'),
+						company: aa.getDisplayValue('company')
+					};
+				}
+			}
+		}
+		var out = Object.keys(outMap).map(function(k){ return outMap[k]; });
+		gs.info('getApplicativeAccessByBp OUTPUT json ' + new global.JSON().encode(out));
+		return new global.JSON().encode(out);
+	},
 
 	getProjectsByBusinessProfile: function (BusinessProfileId) {
 
 		gs.info('getProjectsByBusinessProfile START for Business profile ' + BusinessProfileId)
 
 		var BusinessProfileRequiredProjects = [];
-		// 1) Business Parts attivi per BP
 		var BusinessPart = new GlideRecord('x_587457_pear_business_part_of_app_access');
 		BusinessPart.addQuery('business_profile_id', BusinessProfileId);
 		// BusinessPart.addQuery('status', 'active');
@@ -423,34 +361,41 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 			while(ApplicativeAccess.next())
 				if(!BusinessProfileRequiredProjects.toString().contains(ApplicativeAccess.project.toString()))
 					BusinessProfileRequiredProjects.push(ApplicativeAccess.project.toString())
-
-			// gs.info('getProjectsByBusinessProfile Final Query ' + ApplicativeAccessquery)
-			// gs.info('getProjectsByBusinessProfile BusinessProfileRequiredProjects ' + BusinessProfileRequiredProjects)
 			return BusinessProfileRequiredProjects
 		}
     },
 
-	getBusinessProfilesByUser: function () {
+	getBusinessProfilesByUser: function () {						// It is used?
 		var pmng_user = new GlideRecord('x_587457_pear_pmng_user');
 		pmng_user.get('uid',gs.getUserID());
 		gs.info('getBusinessProfilesByUser START for user ' + gs.getUserID() + ' User Type: ' + pmng_user.user_type);
 		var bp_array = [];
 		var bp = new GlideRecord('x_587457_pear_business_profile');
 		bp.addQuery('status','enable');
-		bp.addEncodedQuery("user_typeLIKE" + pmng_user.user_type);
+		bp.addEncodedQuery("user_typeLIKE" + pmng_user.user_type);	// MS	-> maybe condition to if(!gs.nil(requestedFor))
 		bp.query();
 		while(bp.next())
 			bp_array.push(bp.sys_id.toString())
-
-		// gs.info('getBusinessProfilesByUser bp_array ' + bp_array.toString())
 
 		return 'sys_idIN' + bp_array.toString()
 
 	},
 
+	getConcernedApplicativeAccessOfBusinessPart: function (bp_sysId,requestedFor) {
 
+		if (!bp_sysId) {
+			bp_sysId = this.getParameter('sysparm_bp_sysId') || '[]';
+		}
 
-	getConcernedApplicativeAccessOfBusinessPart: function (bp_sysId) {
+		if (!requestedFor) {
+			requestedFor = this.getParameter('sysparm_requestedFor') || '';
+		}
+		
+		var pmng_user = new GlideRecord('x_587457_pear_pmng_user');
+		if(gs.nil(requestedFor))
+			pmng_user.get('uid',gs.getUserID());
+		else
+			pmng_user.get('uid',requestedFor);
 		
 		var query = "";
 		var aa_array = [];
@@ -459,8 +404,6 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 			bp_sysId = this.getParameter('sysparm_bp_sysId');
 		}
 
-		// gs.info('getConcernedApplicativeAccessOfBusinessPart ' + bp_sysId);
-
 		var bp_LabelCompontents = [];
 		var bp = new GlideRecord('x_587457_pear_business_part_of_app_access');
 		if(bp.get(bp_sysId) && bp.status == 'enable')
@@ -468,27 +411,23 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 			for (i=0; i<AllLabelComponents.length;i++)
 			{
 				if(!gs.nil(bp.getValue(AllLabelComponents[i])))
-					//bp_LabelCompontents.push(bp.getValue(AllLabelComponents[i]))
 					bp_LabelCompontents.push(AllLabelComponents[i])
 			}
-			// gs.info('getConcernedApplicativeAccessOfBusinessPart bp_LabelCompontents ' + bp_LabelCompontents.toString());
 
 			var aa = new GlideRecord('x_587457_pear_applicative_access');
 			aa.addQuery('enable',true);
+			aa.addEncodedQuery("user_typeLIKE" + pmng_user.user_type);	// MS
 			for(j=0;j<bp_LabelCompontents.length;j++)
 			{
-				// gs.info('getConcernedApplicativeAccessOfBusinessPart bp_LabelCompontents[j] ' + bp_LabelCompontents[j] + ' > ' + bp.getValue(bp_LabelCompontents[j]))
-
 				aa.addQuery(bp_LabelCompontents[j],bp.getValue(bp_LabelCompontents[j]))
 			}
 			aa.query();
-			// gs.info('getConcernedApplicativeAccessOfBusinessPart aa query ' + aa.getEncodedQuery())
+			gs.info('getConcernedApplicativeAccessOfBusinessPart ' + aa.getEncodedQuery())
 			query = aa.getEncodedQuery();
 			while(aa.next())
 			{
 				aa_array.push(aa.sys_id.toString())
 			}
-
 		}
 		if(aa_array.length ==0)
 			return 'sys_id=XYZ';
@@ -506,7 +445,12 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
 		gs.info('getApplicativeAccessFormatbyApp Application ' + Application)
 		var app = new GlideRecord('x_587457_pear_application');
 		if(app.get(Application))
-			result = app.applicative_access_format.format + "|" + app.applicative_access_format.separator;
+		{
+			if(gs.nil(app.applicative_access_format.separator))
+				result = app.applicative_access_format.format;
+			else
+				result = app.applicative_access_format.format + "|" + app.applicative_access_format.separator;
+		}
 
 		return result;
 
@@ -518,13 +462,13 @@ getApplicativeAccessByBp_v2: function(rowsJson) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-14 12:17:09</sys_created_on>
         <sys_id>1e2bd3c847d53210c361f19f016d43ce</sys_id>
-        <sys_mod_count>150</sys_mod_count>
+        <sys_mod_count>213</sys_mod_count>
         <sys_name>PEAR_Utils3</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_script_include_1e2bd3c847d53210c361f19f016d43ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-19 23:05:14</sys_updated_on>
+        <sys_updated_on>2025-11-26 22:53:17</sys_updated_on>
     </sys_script_include>
 </record_update>

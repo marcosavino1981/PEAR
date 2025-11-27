@@ -3,77 +3,62 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38878e99478d7210c361f19f016d4381</list_id>
+            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">3eeed4de47997210c361f19f016d43be</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-05 17:08:23</sys_created_on>
-            <sys_id>74878e99478d7210c361f19f016d4382</sys_id>
+            <sys_created_on>2025-11-20 22:21:02</sys_created_on>
+            <sys_id>faeed4de47997210c361f19f016d43bf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-05 17:08:23</sys_updated_on>
+            <sys_updated_on>2025-11-20 22:21:02</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>assigned_app_access_id</element>
-            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38878e99478d7210c361f19f016d4381</list_id>
+            <element>uid</element>
+            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">3eeed4de47997210c361f19f016d43be</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-05 17:08:23</sys_created_on>
-            <sys_id>78878e99478d7210c361f19f016d4382</sys_id>
+            <sys_created_on>2025-11-20 22:21:02</sys_created_on>
+            <sys_id>f2eed4de47997210c361f19f016d43c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-05 17:08:23</sys_updated_on>
+            <sys_updated_on>2025-11-20 22:21:02</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>assignment_date</element>
-            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38878e99478d7210c361f19f016d4381</list_id>
+            <element>business_profile</element>
+            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">3eeed4de47997210c361f19f016d43be</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-05 17:08:23</sys_created_on>
-            <sys_id>7c878e99478d7210c361f19f016d4382</sys_id>
+            <sys_created_on>2025-11-20 22:21:02</sys_created_on>
+            <sys_id>f6eed4de47997210c361f19f016d43c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-05 17:08:23</sys_updated_on>
+            <sys_updated_on>2025-11-20 22:21:02</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>uid</element>
-            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38878e99478d7210c361f19f016d4381</list_id>
+            <element>assignment_date</element>
+            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">3eeed4de47997210c361f19f016d43be</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-05 17:08:23</sys_created_on>
-            <sys_id>70878e99478d7210c361f19f016d4383</sys_id>
+            <sys_created_on>2025-11-20 22:21:02</sys_created_on>
+            <sys_id>faeed4de47997210c361f19f016d43c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-05 17:08:23</sys_updated_on>
-        </sys_ui_list_element>
-        <sys_ui_list_element action="INSERT_OR_UPDATE">
-            <average_value>false</average_value>
-            <element>business_profile_id</element>
-            <list_id display_value="x_587457_pear_assigned_business_profile" element="NULL" name="x_587457_pear_assigned_business_profile" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">38878e99478d7210c361f19f016d4381</list_id>
-            <max_value>false</max_value>
-            <min_value>false</min_value>
-            <position>4</position>
-            <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-05 17:08:23</sys_created_on>
-            <sys_id>74878e99478d7210c361f19f016d4383</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-05 17:08:23</sys_updated_on>
+            <sys_updated_on>2025-11-20 22:21:02</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -87,10 +72,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-11-05 17:08:23</sys_created_on>
+            <sys_created_on>2025-11-20 22:21:02</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>38878e99478d7210c361f19f016d4381</sys_id>
+            <sys_id>3eeed4de47997210c361f19f016d43be</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_587457_pear_assigned_business_profile</sys_name>
             <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -98,7 +83,7 @@
             <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
             <sys_update_name>sys_ui_list_x_587457_pear_assigned_business_profile_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-11-05 17:08:23</sys_updated_on>
+            <sys_updated_on>2025-11-20 22:21:02</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

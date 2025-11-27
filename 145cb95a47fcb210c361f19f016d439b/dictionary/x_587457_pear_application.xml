@@ -5,7 +5,7 @@
         <element label="Description" mandatory="true" max_length="100" name="description" type="string"/>
         <element display="true" label="Label" mandatory="true" max_length="40" name="label" type="string"/>
         <element label="REUNIS app code" max_length="40" name="reunis_app_code" read_only="true" type="string"/>
-        <element label="Applicative access format" max_length="32" name="applicative_access_format" read_only="true" reference="x_587457_pear_app_access_format" type="reference"/>
+        <element label="Applicative access format" max_length="32" name="applicative_access_format" reference="x_587457_pear_app_access_format" type="reference"/>
         <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Disable" sequence="0" value="disable"/>

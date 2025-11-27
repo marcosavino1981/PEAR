@@ -4,38 +4,31 @@
         <client_script/>
         <description/>
         <direct>false</direct>
-        <endpoint>x_587457_pear_Applicative Access Preview.do</endpoint>
+        <endpoint>x_587457_pear_Access Profile Preview.do</endpoint>
         <html>&lt;j:jelly xmlns:j="jelly:core" xmlns:g="glide"&gt;&#13;
-  &lt;div id="pear-aa-container"&gt;&#13;
-    &lt;h4&gt;Assignable Application Accesses&lt;/h4&gt;&#13;
-    &lt;button id="pear-aa-refresh" type="button"&gt;Refresh&lt;/button&gt;&#13;
-    &lt;div id="pear-aa-loading" style="display:none;"&gt;Loading...&lt;/div&gt;&#13;
-    &lt;table id="pear-aa-table" class="table table-bordered table-striped table-sm" style="display:none;"&gt;&#13;
+  &lt;div id="pear-ap-container"&gt;&#13;
+    &lt;h4&gt;Assignable Access Profiles&lt;/h4&gt;&#13;
+    &lt;button id="pear-ap-refresh" type="button"&gt;RefreshAP&lt;/button&gt;&#13;
+    &lt;div id="pear-ap-loading" style="display:none;"&gt;Loading...&lt;/div&gt;&#13;
+    &lt;table id="pear-ap-table" class="table table-bordered table-striped table-sm" style="display:none;"&gt;&#13;
       &lt;thead&gt;&#13;
         &lt;tr&gt;&#13;
-          &lt;th&gt;Business part&lt;/th&gt;&#13;
-          &lt;th&gt;App access ID&lt;/th&gt;&#13;
-          &lt;th&gt;App access&lt;/th&gt;&#13;
+          &lt;th&gt;Access profile ID&lt;/th&gt;&#13;
+          &lt;th&gt;Label&lt;/th&gt;&#13;
+          &lt;th&gt;Code&lt;/th&gt;&#13;
           &lt;th&gt;Application&lt;/th&gt;&#13;
-          &lt;th&gt;App access format&lt;/th&gt;&#13;
-          &lt;th&gt;Technical role&lt;/th&gt;&#13;
-          &lt;th&gt;Business unit&lt;/th&gt;&#13;
-          &lt;th&gt;Organization&lt;/th&gt;&#13;
-          &lt;th&gt;Project&lt;/th&gt;&#13;
-          &lt;th&gt;Group&lt;/th&gt;&#13;
-          &lt;th&gt;Company&lt;/th&gt;&#13;
         &lt;/tr&gt;&#13;
       &lt;/thead&gt;&#13;
-      &lt;tbody id="pear-aa-body"&gt;&lt;/tbody&gt;&#13;
+      &lt;tbody id="pear-ap-body"&gt;&lt;/tbody&gt;&#13;
     &lt;/table&gt;&#13;
   &lt;/div&gt;&#13;
 &#13;
   &lt;script&gt;&#13;
   //&lt;![CDATA[&#13;
-    window.refreshAAPreview = function() {&#13;
-      var loading = document.getElementById('pear-aa-loading');&#13;
-      var table   = document.getElementById('pear-aa-table');&#13;
-      var body    = document.getElementById('pear-aa-body');&#13;
+    window.refreshAPPreview = function() {&#13;
+      var loading = document.getElementById('pear-ap-loading');&#13;
+      var table   = document.getElementById('pear-ap-table');&#13;
+      var body    = document.getElementById('pear-ap-body');&#13;
 &#13;
       var rowsJSON = '[]';&#13;
       try {&#13;
@@ -48,7 +41,7 @@
       body.innerHTML = '';&#13;
 &#13;
       var ga = new GlideAjax('x_587457_pear.PEAR_Utils3');&#13;
-      ga.addParam('sysparm_name','getApplicativeAccessByBp');&#13;
+      ga.addParam('sysparm_name','getAccessProfileByBp');&#13;
       ga.addParam('sysparm_rowsJson', rowsJSON);&#13;
       ga.addParam('sysparm_requestedFor', requestedFor);&#13;
       ga.getXMLAnswer(function(answer){&#13;
@@ -57,7 +50,7 @@
         try { data = JSON.parse(answer || '[]'); } catch(e) {}&#13;
         data.forEach(function(row){&#13;
           var tr = document.createElement('tr');&#13;
-          ['business_part','number','label','application','app_access_format','technical_role','business_unit','organization','project','group','company'].forEach(function(f){&#13;
+          ['number','label','code','application'].forEach(function(f){&#13;
             var td = document.createElement('td');&#13;
             td.textContent = row[f] || '';&#13;
             tr.appendChild(td);&#13;
@@ -70,27 +63,27 @@
 &#13;
     // primo render e bottone refresh&#13;
     addLoadEvent(function(){&#13;
-      if (typeof window.refreshAAPreview === 'function') window.refreshAAPreview();&#13;
-      var btn = document.getElementById('pear-aa-refresh');&#13;
-      if (btn) btn.addEventListener('click', window.refreshAAPreview);&#13;
+      if (typeof window.refreshAPPreview === 'function') window.refreshAPPreview();&#13;
+      var btn = document.getElementById('pear-ap-refresh');&#13;
+      if (btn) btn.addEventListener('click', window.refreshAPPreview);&#13;
     });&#13;
   //]]&gt;&#13;
   &lt;/script&gt;&#13;
 &lt;/j:jelly&gt;&#13;
 </html>
-        <name>Applicative Access Preview</name>
+        <name>Access Profile Preview</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-11-14 14:41:02</sys_created_on>
-        <sys_id>751c3340471d3210c361f19f016d430c</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_name>Applicative Access Preview</sys_name>
+        <sys_created_on>2025-11-20 07:42:40</sys_created_on>
+        <sys_id>08e5114647113210c361f19f016d43b6</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Access Profile Preview</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
-        <sys_update_name>sys_ui_page_751c3340471d3210c361f19f016d430c</sys_update_name>
+        <sys_update_name>sys_ui_page_08e5114647113210c361f19f016d43b6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-20 14:22:25</sys_updated_on>
+        <sys_updated_on>2025-11-20 15:33:34</sys_updated_on>
     </sys_ui_page>
 </record_update>

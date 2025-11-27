@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6d7c8495478d3210c361f19f016d4306</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>75</sys_mod_count>
         <sys_name>Assign BusinessProfile/AccessProfile/ApplicativeAccess/License/Project to user</sys_name>
         <sys_overrides/>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_6d7c8495478d3210c361f19f016d4306</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-06 09:55:17</sys_updated_on>
+        <sys_updated_on>2025-11-20 22:22:47</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -68,10 +68,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-05 08:12:19</sys_created_on>
         <sys_id>c0dcc0d5478d3210c361f19f016d439e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-06 09:53:43</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2025-11-20 16:17:58</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
         <variable display_value="Action Status">c4dcc0d5478d3210c361f19f016d438d</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_6d7c8495478d3210c361f19f016d4306^id=6d7c8495478d3210c361f19f016d4306"/>
@@ -93,10 +93,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-05 08:12:19</sys_created_on>
         <sys_id>08dcc0d5478d3210c361f19f016d437c</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-06 09:55:17</sys_updated_on>
+        <sys_updated_on>2025-11-20 22:22:46</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=08dcc0d5478d3210c361f19f016d437c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -107,13 +107,62 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-05 08:12:19</sys_created_on>
         <sys_id>40dcc0d5478d3210c361f19f016d438b</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-06 09:55:17</sys_updated_on>
+        <sys_updated_on>2025-11-20 22:22:46</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
-    var rowsJsonRitm = (inputs.ritm.variables.pear_mrvs + '') || '[]';&#13;
-    var JsonPreview = new x_587457_pear.PEAR_PreviewAPI().getApplicativeAccessByBp(rowsJsonRitm);&#13;
+	var now = new GlideDateTime();&#13;
+    var mrvs = JSON.parse(inputs.ritm.variables.pear_mrvs_v3);&#13;
+    var rowsJSON = JSON.stringify(mrvs);&#13;
+    var requestedFor = inputs.ritm.variables.requested_for.toString();&#13;
+    var pmng_user = new GlideRecord('x_587457_pear_pmng_user');&#13;
+    pmng_user.get('uid',requestedFor);&#13;
+    gs.info('Flow Action pmng_user ' + pmng_user.sys_id);&#13;
+&#13;
+    var JsonPreview = new x_587457_pear.PEAR_Utils3().getApplicativeAccessByBp(rowsJSON,requestedFor);&#13;
+    gs.info('Flow Action JsonPreview ' + JsonPreview);&#13;
+&#13;
+    var bp_arr = new global.JSON().decode(rowsJSON);&#13;
+&#13;
+    var bp = new GlideRecord('x_587457_pear_business_profile');&#13;
+    var abp = new GlideRecord('x_587457_pear_assigned_business_profile');&#13;
+    for(j=0;j&lt;bp_arr.length;j++)&#13;
+    {&#13;
+        abp.initialize();&#13;
+        var item = bp_arr[j];&#13;
+        bp.get(item.business_profile);&#13;
+        abp.uid = pmng_user.sys_id;&#13;
+        abp.business_profile = bp.sys_id;&#13;
+        abp.assignment_date = now;&#13;
+        abp.insert()&#13;
+    }&#13;
+&#13;
+&#13;
+&#13;
+    //var jsonString = JsonPreview; // il valore ricevuto&#13;
+    var aaa_arr = new global.JSON().decode(JsonPreview);&#13;
+&#13;
+    var aaa = new GlideRecord('x_587457_pear_assigned_app_access');&#13;
+	var aa = new GlideRecord('x_587457_pear_applicative_access');&#13;
+    for (var i = 0; i &lt; aaa_arr.length; i++)&#13;
+    {&#13;
+        aaa.initialize();&#13;
+        var item = aaa_arr[i];&#13;
+		aa.get('number',item.number)&#13;
+        gs.info("Flow Action Elemento " + i + " → " + item.label + " (" + item.number + ")");&#13;
+        aaa.uid = pmng_user.sys_id;&#13;
+		aaa.app_access_id = aa.sys_id;&#13;
+		aaa.assignment_date = now;&#13;
+		aaa.insert();&#13;
+    }&#13;
+&#13;
+&#13;
+&#13;
+/*&#13;
+    var rowsJsonRitm = (inputs.ritm.variables.pear_mrvs_v3 + '') || '[]';&#13;
+&#13;
+&#13;
 &#13;
     var abp_sysId;&#13;
     var aaa_sysId;&#13;
@@ -190,6 +239,8 @@
 		}&#13;
 		&#13;
     }&#13;
+&#13;
+*/&#13;
 &#13;
 })(inputs, outputs);&#13;
 </value>
@@ -485,14 +536,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-05 08:12:19</sys_created_on>
         <sys_id>00dcc0d5478d3210c361f19f016d4393</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>143</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-06 09:55:17</sys_updated_on>
+        <sys_updated_on>2025-11-20 22:22:47</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
     <io_set_item action="INSERT_OR_UPDATE">
         <order>100</order>
-        <sc_cat_item display_value="PEAR - Access Request 2">9dab904d4749b210c361f19f016d4321</sc_cat_item>
+        <sc_cat_item display_value="PEAR - Access Request">9dab904d4749b210c361f19f016d4321</sc_cat_item>
         <sys_class_name>io_set_item</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-11-14 12:11:33</sys_created_on>

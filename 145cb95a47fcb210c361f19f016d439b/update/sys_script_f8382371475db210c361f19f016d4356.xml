@@ -3,22 +3,22 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
-        <action_update>true</action_update>
+        <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_587457_pear_business_part_of_app_access</collection>
+        <collection>x_587457_pear_organization</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>PEAR - BIU-BPa</name>
+        <name>PEAR - TO DO - Organization</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,40 +29,34 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	// Couple Label + User Type unique - START
-	if(current.label.changes() || current.user_type_list.changes())
-	{
-		gs.addInfoMessage('BR PEAR - BIU-BPa triggered by the update of Bpa ' + current.display_name);
-		var bpa = new GlideRecord('x_587457_pear_business_part_of_app_access');
-		bpa.addQuery('user_type_list',current.user_type_list);
-		bpa.addQuery('label',current.label);
-		bpa.query();
-		if(bpa.next())
-		{
-			gs.addErrorMessage('The couple Label + User type must be unique')
-			current.setAbortAction(true);
-		}
-	}
-	// Couple Label + User Type unique - END
+	// Add your code here
+	gs.addErrorMessage('PEAR - TO DO - Organization');
+	gs.addErrorMessage("1) Implement Label not editable except at the creation in PEAR");
+	gs.addErrorMessage("2) Description mandatory?");
+	gs.addErrorMessage("3) Enable: any logic behind?")
+	gs.addErrorMessage("4) PEAR access mngt: any logic behind?")
+	gs.addErrorMessage("7) Implement Type Mandatory if origin != PEAR")
+
+
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-11-19 11:00:14</sys_created_on>
+        <sys_created_on>2025-11-19 23:43:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>8079f03947557210c361f19f016d4346</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>PEAR - BIU-BPa</sys_name>
+        <sys_id>f8382371475db210c361f19f016d4356</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>PEAR - TO DO - Organization</sys_name>
         <sys_overrides/>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
-        <sys_update_name>sys_script_8079f03947557210c361f19f016d4346</sys_update_name>
+        <sys_update_name>sys_script_f8382371475db210c361f19f016d4356</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-21 08:02:01</sys_updated_on>
+        <sys_updated_on>2025-11-19 23:49:24</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>before_display</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=8079f03947557210c361f19f016d4346"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=f8382371475db210c361f19f016d4356"/>
 </record_update>

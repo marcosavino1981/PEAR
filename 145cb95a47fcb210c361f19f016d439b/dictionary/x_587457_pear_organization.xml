@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="f009c61a4770f210c361f19f016d43ec" label="Organization" max_length="40" name="x_587457_pear_organization" type="collection">
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Organization ID" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Organization ID" max_length="40" name="number" read_only="true" type="string"/>
         <element label="type" max_length="40" name="type" type="string"/>
-        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <element display="true" label="Label" mandatory="true" max_length="40" name="label" type="string"/>
         <element label="Applications" max_length="1024" name="applications" reference="x_587457_pear_application" type="glide_list"/>
-        <element label="PEAR access mngt" max_length="40" name="pear_access_mngt" type="string"/>
+        <element default="PEAR" label="Origin" max_length="100" name="origin" read_only="true" type="string"/>
+        <element label="PEAR access mngt" max_length="40" name="pear_access_mngt" type="boolean"/>
         <element label="Description" max_length="100" name="description" type="string"/>
         <element label="Enable" max_length="40" name="enable" type="boolean"/>
-        <element label="Orig" max_length="40" name="orig" type="string"/>
     </element>
 </database>

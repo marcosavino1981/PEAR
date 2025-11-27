@@ -33,7 +33,7 @@
         <name>x_587457_pear_application</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>true</read_only>
+        <read_only>false</read_only>
         <read_roles/>
         <reference display_value="" name="x_587457_pear_app_access_format">x_587457_pear_app_access_format</reference>
         <reference_cascade_rule/>
@@ -53,7 +53,7 @@
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_dictionary_x_587457_pear_application_applicative_access_format</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-19 18:07:23</sys_updated_on>
+        <sys_updated_on>2025-11-26 18:03:11</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -45,14 +45,14 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>applicative_access_dynamic_v3</name>
+        <name>requested_for</name>
         <not_available_conversation>false</not_available_conversation>
-        <order>600</order>
+        <order>100</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Applicative access dynamic v3</question_text>
+        <question_text>Requested for</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -60,7 +60,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference/>
+        <reference>sys_user</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -80,21 +80,21 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-11-14 14:40:34</sys_created_on>
-        <sys_id>8ffbbb00471d3210c361f19f016d4303</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Applicative access dynamic v3</sys_name>
+        <sys_created_on>2025-11-20 14:17:34</sys_created_on>
+        <sys_id>6d003e86471d3210c361f19f016d43ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requested for</sys_name>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
         <sys_policy/>
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
-        <sys_update_name>item_option_new_8ffbbb00471d3210c361f19f016d4303</sys_update_name>
+        <sys_update_name>item_option_new_6d003e86471d3210c361f19f016d43ef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-14 14:41:09</sys_updated_on>
+        <sys_updated_on>2025-11-20 14:17:34</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>15</type>
-        <ui_page display_value="Applicative Access Preview">751c3340471d3210c361f19f016d430c</ui_page>
+        <type>8</type>
+        <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
@@ -109,22 +109,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=8ffbbb00471d3210c361f19f016d4303"/>
-    <fx_price action="delete_multiple" query="id=8ffbbb00471d3210c361f19f016d4303"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=6d003e86471d3210c361f19f016d43ef"/>
+    <fx_price action="delete_multiple" query="id=6d003e86471d3210c361f19f016d43ef"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="EUR">EUR</currency>
         <field>price_if_checked</field>
-        <id>8ffbbb00471d3210c361f19f016d4303</id>
+        <id>6d003e86471d3210c361f19f016d43ef</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-11-14 14:40:34</sys_created_on>
-        <sys_id>87fb3f00471d3210c361f19f016d436e</sys_id>
+        <sys_created_on>2025-11-20 14:17:34</sys_created_on>
+        <sys_id>3c4036c6471d3210c361f19f016d43be</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-14 14:40:34</sys_updated_on>
+        <sys_updated_on>2025-11-20 14:17:34</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -132,16 +132,16 @@
         <amount>0</amount>
         <currency display_value="EUR">EUR</currency>
         <field>rec_price_if_checked</field>
-        <id>8ffbbb00471d3210c361f19f016d4303</id>
+        <id>6d003e86471d3210c361f19f016d43ef</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-11-14 14:40:34</sys_created_on>
-        <sys_id>47fb3f00471d3210c361f19f016d436d</sys_id>
+        <sys_created_on>2025-11-20 14:17:34</sys_created_on>
+        <sys_id>fc4036c6471d3210c361f19f016d43bd</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-14 14:40:34</sys_updated_on>
+        <sys_updated_on>2025-11-20 14:17:34</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

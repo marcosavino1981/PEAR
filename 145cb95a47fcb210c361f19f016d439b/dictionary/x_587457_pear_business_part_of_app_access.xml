@@ -19,7 +19,7 @@
         <element label="Company" max_length="32" name="company" reference="x_587457_pear_organization" type="reference"/>
         <element label="Access profile" mandatory="true" max_length="32" name="access_profile" reference="x_587457_pear_access_profile" reference_qual="javascript: 'application=' + current.application" type="reference" use_reference_qualifier="advanced"/>
         <element label="License" max_length="32" name="license" reference="x_587457_pear_license" reference_qual="javascript: 'app_id=' + current.app_id" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Technical role" max_length="32" name="technical_role" reference="x_587457_pear_technical_role" reference_qual="javascript: &quot;app_id=&quot; + current.app_id" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Technical role" max_length="32" name="technical_role" reference="x_587457_pear_technical_role" reference_qual="javascript: &quot;application=&quot; + current.application" type="reference" use_reference_qualifier="advanced"/>
         <element label="Description" max_length="100" name="description" type="string"/>
         <element label="Group" max_length="32" name="group" reference="x_587457_pear_organization" type="reference"/>
         <index name="index">
