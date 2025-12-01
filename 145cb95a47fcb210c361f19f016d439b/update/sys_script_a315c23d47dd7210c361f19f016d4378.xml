@@ -33,6 +33,7 @@
 	gs.addErrorMessage('PEAR - TO DO - Application');
 	gs.addErrorMessage("1) Introduce format check on PRD field (3 characters, multivaluable)")
 	gs.addErrorMessage("2) Ask for REUNIS app code. Free string? Some format check? Some value check?")
+	gs.addErrorMessage("3) Set mandatory app access format on New Record; read-only otherwise")
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -41,7 +42,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a315c23d47dd7210c361f19f016d4378</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>PEAR - TO DO - Application</sys_name>
         <sys_overrides/>
         <sys_package display_value="PEAR" source="x_587457_pear">145cb95a47fcb210c361f19f016d439b</sys_package>
@@ -49,7 +50,7 @@
         <sys_scope display_value="PEAR">145cb95a47fcb210c361f19f016d439b</sys_scope>
         <sys_update_name>sys_script_a315c23d47dd7210c361f19f016d4378</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-11-19 16:37:16</sys_updated_on>
+        <sys_updated_on>2025-11-28 14:06:16</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>
